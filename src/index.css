@@ -1,0 +1,520 @@
+:root {
+  /* Durga Enterprises Brand Colors */
+  --color-primary: #c00000;
+  --color-primary-hover: #980000;
+  --color-secondary: #071f49;
+  --color-dark: #0b0b0b;
+  --color-white: #ffffff;
+  --color-text: #252525;
+  --color-border: #e6e6e6;
+
+  /* Bootstrap Theme Overrides */
+  --bs-primary: #c00000;
+  --bs-dark: #0b0b0b;
+
+}
+/* Global Section Heading */
+.section-heading {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 30px;
+}
+
+/* Minimal Industrial Accent */
+.section-heading::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 5px;
+  height: 48px;
+  background: var(--color-primary);
+  border-radius: 2px;
+}
+
+/* Subtitle */
+.section-subtitle {
+  display: block;
+  color: var(--color-primary);
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* Main Heading */
+.section-title {
+  color: var(--color-secondary);
+  font-size: clamp(28px, 2.5vw, 38px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+  .section-heading {
+    padding-left: 18px;
+  }
+
+  .section-heading::before {
+    width: 4px;
+    height: 42px;
+  }
+
+  .section-subtitle {
+    font-size: 16px;
+  }
+}
+
+/* heading end */
+
+a{
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+/* Global Buttons */
+.btn-theme {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: 1px solid var(--color-primary);
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.btn-theme:hover,
+.btn-theme:focus {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  color: var(--color-white);
+}
+
+.btn-theme-outline {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all 0.3s ease;
+}
+
+.btn-theme-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Top Header */
+.top-header {
+  background: var(--bs-dark) !important;
+}
+
+.top-header-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 22px;
+  border-right: 1px solid #292929;
+  font-size: 13px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.top-header-item:first-child {
+  padding-left: 0;
+}
+
+.top-header-item i {
+  color: var(--color-primary);
+}
+
+a.top-header-item:hover {
+  color: var(--color-white);
+}
+
+
+
+.site-logo {
+  width: 215px;
+  height: auto;
+  display: block;
+}
+
+.site-header .nav-link {
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 12px 14px !important;
+  transition: color 0.3s;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link.active,
+.site-header .dropdown-item:hover {
+  color: var(--color-primary);
+}
+
+.site-header .dropdown-item {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.site-header .dropdown-menu {
+  border-radius: 0;
+  border: 1px solid var(--color-border);
+}
+
+.site-header .navbar-toggler {
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+}
+
+.site-header .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .top-header {
+    display: none;
+  }
+
+  .site-logo {
+    width: 180px;
+  }
+
+  .site-header .navbar {
+    padding: 12px 0;
+  }
+
+  .site-header .navbar-collapse {
+    padding-top: 15px;
+  }
+
+  .site-header .nav-link {
+    padding: 12px 0 !important;
+  }
+
+  .site-header .dropdown-menu {
+    border: 0;
+    padding-left: 12px;
+  }
+}
+
+/* header end */
+
+/* ===================================
+   DURGA ENTERPRISES - HOME BANNER
+=================================== */
+/* =====================================
+   DURGA ENTERPRISES - HOME BANNER
+===================================== */
+
+.home-banner {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-banner-slider {
+  width: 100%;
+}
+
+/* Banner Background */
+.home-banner-item {
+  width: 100%;
+  min-height: 790px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Banner Container */
+.home-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Banner Content */
+.home-banner-content {
+  max-width: 800px;
+  padding-bottom: 70px;
+}
+
+/* Banner Heading */
+.home-banner-title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.28;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+/* First Heading Highlight */
+.home-banner-title span {
+  color: var(--color-primary);
+  font-weight: 400;
+}
+
+/* Banner Description */
+.home-banner-desc {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  max-width: 740px;
+  margin-bottom: 0;
+}
+
+/* Existing Outline Button Visibility */
+.home-banner-outline {
+  color: #ffffff;
+}
+
+/* Swiper Pagination */
+.home-banner .swiper-pagination {
+  bottom: 84px !important;
+  z-index: 10;
+}
+
+.home-banner .swiper-pagination-bullet {
+  width: 14px;
+  height: 8px;
+  border-radius: 20px;
+  background: #ffffff;
+  opacity: 0.65;
+  margin: 0 4px !important;
+  transition: all 0.3s ease;
+}
+
+.home-banner .swiper-pagination-bullet-active {
+  width: 30px;
+  background: var(--color-primary);
+  opacity: 1;
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .home-banner .container {
+    max-width: 1140px;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1199.98px) {
+  .home-banner-item {
+    min-height: 700px;
+  }
+
+  .home-banner-title {
+    font-size: 48px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .home-banner-item {
+    min-height: 620px;
+    background-position: 65% center;
+  }
+
+  .home-banner-content {
+    padding-bottom: 40px;
+  }
+
+  .home-banner-title {
+    font-size: 42px;
+  }
+
+  .home-banner-desc {
+    font-size: 15px;
+    max-width: 600px;
+  }
+
+  .home-banner .swiper-pagination {
+    bottom: 40px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .home-banner-item {
+    min-height: 560px;
+    padding: 75px 0 100px;
+    background-position: 65% center;
+  }
+
+  .home-banner-content {
+    padding-bottom: 0;
+  }
+
+  .home-banner-title {
+    font-size: 34px;
+    line-height: 1.25;
+  }
+
+  .home-banner-desc {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .home-banner .swiper-pagination {
+    bottom: 25px !important;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .home-banner-item {
+    min-height: 540px;
+  }
+
+  .home-banner-title {
+    font-size: 29px;
+  }
+
+  .home-banner-desc {
+    font-size: 14px;
+  }
+}
+/* home-banner end */
+
+/* ======================================
+   DURGA ENTERPRISES - HOME MANUFACTURING
+====================================== */
+
+.home-manufacturing-section {
+  background: #f8f8f8;
+  position: relative;
+  min-height: 600px;
+  isolation: isolate;
+}
+
+/* Right Side Diagonal Image */
+.home-manufacturing-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 54%;
+  height: 100%;
+  z-index: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Diagonal Slash Shape */
+  clip-path: polygon(
+    38% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+/* Content Above Background */
+.home-manufacturing-section .container {
+  z-index: 1;
+}
+
+/* Left Content */
+.home-manufacturing-content {
+  padding: 95px 0;
+  max-width: 560px;
+}
+
+/* Paragraph */
+.home-manufacturing-desc {
+  color: #444;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+/* Company Information */
+.home-manufacturing-info {
+  border-left: 3px solid var(--color-primary);
+  padding-left: 18px;
+}
+
+.home-manufacturing-info h5 {
+  color: var(--color-secondary);
+  font-size: 20px;
+}
+
+.home-manufacturing-info span {
+  color: var(--color-primary);
+  font-size: 14px;
+}
+
+/* ======================================
+   RESPONSIVE DESIGN
+====================================== */
+
+/* Laptop */
+@media (max-width: 1199.98px) {
+  .home-manufacturing-image {
+    width: 52%;
+  }
+
+  .home-manufacturing-content {
+    max-width: 480px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .home-manufacturing-section {
+    min-height: auto;
+  }
+
+  .home-manufacturing-image {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    clip-path: none;
+  }
+
+  .home-manufacturing-content {
+    padding: 60px 0;
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .home-manufacturing-image {
+    height: 280px;
+  }
+
+  .home-manufacturing-content {
+    padding: 45px 0;
+  }
+
+  .home-manufacturing-desc {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+
+/* about-sec start */
+
+#about-sec p{
+      color: #444;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* about-sec end */
