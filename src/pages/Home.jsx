@@ -38,6 +38,7 @@ const bannerSlides = [
     },
 ];
 
+
 const Home = () => {
     return (
         <>
@@ -252,6 +253,99 @@ const Home = () => {
                 </div>
 
             </section>
+
+            {/* ================= INDUSTRIES WE SERVE ================= */}
+            <section className="home-industries-section py-5">
+
+                <div className="container">
+
+                    {/* Global Heading */}
+                    <div className="section-heading text-center mb-5">
+                      
+
+                        <h2 className="section-title">
+                            Industries We Serve
+                        </h2>
+
+                        <p className="home-industries-intro mx-auto mt-3 mb-0">
+                            Durga Enterprises offers welding and industrial safety
+                            products for workshops, fabrication units, construction
+                            projects, and different industrial applications.
+                        </p>
+                    </div>
+
+                    {/* Industries Grid */}
+                    <div className="row g-4 justify-content-center">
+
+                        {[
+                            {
+                                title: "Metal Fabrication",
+                                image: "/img/ind-1.webp",
+                            },
+                            {
+                                title: "Manufacturing Units",
+                                image: "/img/ind-1.webp",
+                            },
+                            {
+                                title: "Construction Industry",
+                                image: "/img/ind-1.webp",
+                            },
+                            {
+                                title: "Automotive Workshops",
+                                image: "/img/ind-1.webp",
+                            },
+                            {
+                                title: "Engineering Workshops",
+                                image: "/img/ind-1.webp",
+                            },
+                            {
+                                title: "Industrial Maintenance",
+                                image: "/img/ind-1.webp",
+                            },
+                            {
+                                title: "Steel & Metal Processing",
+                                image: "/img/ind-1.webp",
+                            },
+                        ].map((industry, index) => (
+
+                            <div
+                                className="col-xl-3 col-lg-4 col-md-6"
+                                key={index}
+                            >
+                                <div className="home-industry-card h-100">
+
+                                    {/* Industry Image */}
+                                    <div className="home-industry-image">
+                                        <img
+                                            src={industry.image}
+                                            alt={industry.title}
+                                            className="img-fluid w-100"
+                                            loading="lazy"
+                                        />
+                                    </div>
+
+                                    {/* Industry Name */}
+                                    <div className="home-industry-title">
+                                        <h3 className="mb-0">
+                                            {industry.title}
+                                        </h3>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        ))}
+
+                    </div>
+                </div>
+
+            </section>
+
+            {/* industries end */}
+
+       
+
+            {/* product-sec end */}
 
         </>
     )
