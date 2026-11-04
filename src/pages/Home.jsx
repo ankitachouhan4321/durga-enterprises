@@ -20,25 +20,25 @@ const bannerSlides = [
         image: "https://simbott.com/wp-content/uploads/2024/05/Essential-Safety-Equipment-for-Welding-1024x576.jpg",
     },
 
-    // {
-    //     id: 2,
-    //     highlight: "Industrial Safety",
-    //     firstLine: "Protection Products",
-    //     secondLine: "For Your Workplace",
-    //     description:
-    //         "Discover industrial safety products for daily workplace requirements, protection and practical industrial applications.",
-    //     image: "https://simbott.com/wp-content/uploads/2024/05/Essential-Safety-Equipment-for-Welding-1024x576.jpg",
-    // },
+    {
+        id: 2,
+        highlight: "Industrial Safety",
+        firstLine: "Protection Products",
+        secondLine: "For Your Workplace",
+        description:
+            "Discover industrial safety products for daily workplace requirements, protection and practical industrial applications.",
+        image: "https://simbott.com/wp-content/uploads/2024/05/Essential-Safety-Equipment-for-Welding-1024x576.jpg",
+    },
 
-    // {
-    //     id: 3,
-    //     highlight: "Welding Solutions",
-    //     firstLine: "Equipment & Accessories",
-    //     secondLine: "For Professionals",
-    //     description:
-    //         "Find welding equipment and accessories for metal fabrication, maintenance and industrial operations.",
-    //     image: "https://simbott.com/wp-content/uploads/2024/05/Essential-Safety-Equipment-for-Welding-1024x576.jpg",
-    // },
+    {
+        id: 3,
+        highlight: "Welding Solutions",
+        firstLine: "Equipment & Accessories",
+        secondLine: "For Professionals",
+        description:
+            "Find welding equipment and accessories for metal fabrication, maintenance and industrial operations.",
+        image: "https://simbott.com/wp-content/uploads/2024/05/Essential-Safety-Equipment-for-Welding-1024x576.jpg",
+    },
 ];
 
 const featuredProducts = [
@@ -225,32 +225,44 @@ const Home = () => {
                             </div>
 
                         </div>
-
-                        <div class="col-lg-6">
+                        <div className="col-lg-6">
 
                             {/* Global Heading */}
                             <div className="section-heading">
                                 <span className="section-subtitle">
-                                    Our Manufacturing & Production
+                                    About Durga Enterprises
                                 </span>
 
                                 <h2 className="section-title">
-                                    Welding & Safety Products for Industrial Needs
+                                    Your Trusted Source for Welding & Industrial Safety Products
                                 </h2>
-
                             </div>
 
-                            <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                            <p>ectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conse
-
+                            <p>
+                                Durga Enterprises is a Delhi-based manufacturer, importer,
+                                and supplier of welding accessories and industrial safety
+                                products. We offer a wide range of products designed to
+                                support the everyday requirements of fabrication workshops,
+                                construction sites, manufacturing units, and industrial
+                                operations.
                             </p>
-                            <br/>
 
-                            <a href="/" className="btn-theme mt-4">
+                            <p>
+                                Our product range includes welding accessories, personal
+                                protective equipment, safety jackets, protective eyewear,
+                                traffic safety products, and other industrial safety
+                                essentials. With a customer-focused approach, we aim to
+                                provide dependable product options, competitive pricing,
+                                and responsive support for individual and bulk enquiries.
+                            </p>
+
+                            <br />
+
+                            <a href="/about" className="btn-theme mt-4">
                                 Read More
                                 <i className="fa-solid fa-arrow-right"></i>
                             </a>
+
                         </div>
 
                     </div>
@@ -439,7 +451,7 @@ const Home = () => {
 
 
                         <h2 className="home-why-choose-title">
-                            Your Partner for Welding & Industrial Safety Products
+                            Why Durga Enterprises Is the Right Choice for Your Industrial Needs
                         </h2>
 
                         <p className="home-why-choose-intro">
