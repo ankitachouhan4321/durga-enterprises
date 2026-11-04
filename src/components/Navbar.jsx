@@ -27,11 +27,11 @@ const Navbar = () => {
                 </div>
 
                 <a
-                  href="mailto:Durgaenterprises918@yahoo.com"
+                  href="mailto:durgaenterprises918@yahoo.com"
                   className="top-header-item"
                 >
                   <i className="fa-regular fa-envelope"></i>
-                  <span>Durgaenterprises918@yahoo.com</span>
+                  <span>durgaenterprises918@yahoo.com</span>
                 </a>
 
               </div>
@@ -225,7 +225,7 @@ const Navbar = () => {
                   className="btn-theme"
                 >
                   <i className="fa-solid fa-phone fa-beat pe-4"></i>
-                  Call Now 
+                  Call Now
                 </Link>
               </li>
 

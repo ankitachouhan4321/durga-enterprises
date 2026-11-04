@@ -127,7 +127,7 @@ const Footer = () => {
                     <i className="fa-brands fa-youtube"></i>
                   </a>
 
-                
+
 
                 </div>
 
@@ -175,7 +175,7 @@ const Footer = () => {
                   ))}
                 </ul>
 
-            
+
 
               </div>
             </div>
@@ -190,7 +190,7 @@ const Footer = () => {
 
                 <ul className="footer-contact list-unstyled mb-0">
 
-                 
+
 
                   <li>
                     <div className="footer-contact-icon">
@@ -212,8 +212,8 @@ const Footer = () => {
 
                     <div>
                       <strong>Email Us</strong>
-                      <a href="mailto:Durgaenterprises918@yahoo.com">
-                        Durgaenterprises918@yahoo.com
+                      <a href="mailto:durgaenterprises918@yahoo.com">
+                        durgaenterprises918@yahoo.com
                       </a>
                     </div>
                   </li>
@@ -232,7 +232,7 @@ const Footer = () => {
                       </p>
                     </div>
                   </li>
-               
+
                 </ul>
 
               </div>
