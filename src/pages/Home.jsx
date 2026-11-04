@@ -88,38 +88,38 @@ const featuredProducts = [
 
 // SAMPLE DATA - Replace with verified customer reviews
 const testimonials = [
-  {
-    id: 1,
-    name: "Customer Name",
-    designation: "Fabrication Workshop",
-    rating: 5,
-    review:
-      "We found the welding and safety product range useful for our workshop requirements. The enquiry process was straightforward.",
-  },
-  {
-    id: 2,
-    name: "Customer Name",
-    designation: "Industrial Buyer",
-    rating: 5,
-    review:
-      "The team helped us understand the available industrial safety products and suitable options for our requirements.",
-  },
-  {
-    id: 3,
-    name: "Customer Name",
-    designation: "Construction Contractor",
-    rating: 5,
-    review:
-      "We enquired about safety equipment for our project. The product information helped us compare the available options.",
-  },
-  {
-    id: 4,
-    name: "Customer Name",
-    designation: "Workshop Owner",
-    rating: 5,
-    review:
-      "A practical range of welding accessories and protective products for everyday workshop requirements.",
-  },
+    {
+        id: 1,
+        name: "Customer Name",
+        designation: "Fabrication Workshop",
+        rating: 5,
+        review:
+            "We found the welding and safety product range useful for our workshop requirements. The enquiry process was straightforward.",
+    },
+    {
+        id: 2,
+        name: "Customer Name",
+        designation: "Industrial Buyer",
+        rating: 5,
+        review:
+            "The team helped us understand the available industrial safety products and suitable options for our requirements.",
+    },
+    {
+        id: 3,
+        name: "Customer Name",
+        designation: "Construction Contractor",
+        rating: 5,
+        review:
+            "We enquired about safety equipment for our project. The product information helped us compare the available options.",
+    },
+    {
+        id: 4,
+        name: "Customer Name",
+        designation: "Workshop Owner",
+        rating: 5,
+        review:
+            "A practical range of welding accessories and protective products for everyday workshop requirements.",
+    },
 ];
 
 const Home = () => {
@@ -146,12 +146,12 @@ const Home = () => {
                 >
                     {bannerSlides.map((slide, index) => (
                         <SwiperSlide key={slide.id}>
-                           <div
-  className="home-banner-item d-flex align-items-center"
-  style={{
-    backgroundImage: `url("${slide.image}")`,
-  }}
->
+                            <div
+                                className="home-banner-item d-flex align-items-center"
+                                style={{
+                                    backgroundImage: `url("${slide.image}")`,
+                                }}
+                            >
                                 <div className="container">
                                     <div className="row">
                                         <div className="col-lg-9 col-xl-8">
@@ -335,7 +335,7 @@ const Home = () => {
                                     </span>
                                 </div>
 
-                              
+
 
                             </div>
                         </div>
@@ -354,7 +354,7 @@ const Home = () => {
 
                     {/* Global Heading */}
                     <div className=" text-center mb-5">
-                      
+
 
                         <h2 className="section-title">
                             Industries We Serve
@@ -732,7 +732,7 @@ const Home = () => {
                                             />
                                         </Link>
 
-                                
+
 
                                     </div>
 
@@ -917,108 +917,299 @@ const Home = () => {
             </section>
             {/* ================= USP SECTION END ================= */}
 
+            {/* ================= FAQ SECTION START ================= */}
+            <section className="durga-faq-section py-5">
+                <div className="container py-lg-4">
+
+                    <div className="row align-items-start g-5">
+
+                        {/* Left Heading */}
+                        <div className="col-lg-5">
+                            <div className="section-heading">
+                                <span className="section-subtitle">
+                                    Frequently Asked Questions
+                                </span>
+
+                                <h2 className="section-title">
+                                    Have Questions About Our Products?
+                                </h2>
+                            </div>
+
+                            <p className="durga-faq-intro">
+                                Find answers to common questions about our welding
+                                accessories, industrial safety equipment, product
+                                availability, and bulk order enquiries.
+                            </p>
+
+                            <a href="/contact" className="btn-theme mt-3">
+                                Contact Us
+                                <i className="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        {/* Right FAQ Accordion */}
+                        <div className="col-lg-7">
+
+                            <div className="accordion durga-faq-accordion" id="durgaFaqAccordion">
+
+                                {/* FAQ 1 */}
+                                <div className="accordion-item">
+                                    <h3 className="accordion-header">
+                                        <button
+                                            className="accordion-button"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#durgaFaqOne"
+                                            aria-expanded="true"
+                                            aria-controls="durgaFaqOne"
+                                        >
+                                            What products does Durga Enterprises offer?
+                                        </button>
+                                    </h3>
+
+                                    <div
+                                        id="durgaFaqOne"
+                                        className="accordion-collapse collapse show"
+                                        data-bs-parent="#durgaFaqAccordion"
+                                    >
+                                        <div className="accordion-body">
+                                            Durga Enterprises offers welding accessories and
+                                            industrial safety products, including safety
+                                            helmets, protective eyewear, safety gloves,
+                                            safety shoes, reflective jackets, traffic safety
+                                            products, and other workplace safety essentials.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* FAQ 2 */}
+                                <div className="accordion-item">
+                                    <h3 className="accordion-header">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#durgaFaqTwo"
+                                            aria-expanded="false"
+                                            aria-controls="durgaFaqTwo"
+                                        >
+                                            Can I enquire about bulk orders?
+                                        </button>
+                                    </h3>
+
+                                    <div
+                                        id="durgaFaqTwo"
+                                        className="accordion-collapse collapse"
+                                        data-bs-parent="#durgaFaqAccordion"
+                                    >
+                                        <div className="accordion-body">
+                                            Yes. You can contact our team with your required
+                                            products, quantities, and delivery location.
+                                            We will help you with product information,
+                                            availability, and quotation enquiries.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* FAQ 3 */}
+                                <div className="accordion-item">
+                                    <h3 className="accordion-header">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#durgaFaqThree"
+                                            aria-expanded="false"
+                                            aria-controls="durgaFaqThree"
+                                        >
+                                            Which industries use your safety products?
+                                        </button>
+                                    </h3>
+
+                                    <div
+                                        id="durgaFaqThree"
+                                        className="accordion-collapse collapse"
+                                        data-bs-parent="#durgaFaqAccordion"
+                                    >
+                                        <div className="accordion-body">
+                                            Our product range is relevant to manufacturing
+                                            units, fabrication workshops, construction
+                                            sites, maintenance teams, engineering workshops,
+                                            and other industrial workplaces. Product
+                                            suitability depends on the specific application.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* FAQ 4 */}
+                                <div className="accordion-item">
+                                    <h3 className="accordion-header">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#durgaFaqFour"
+                                            aria-expanded="false"
+                                            aria-controls="durgaFaqFour"
+                                        >
+                                            How can I get a quotation for products?
+                                        </button>
+                                    </h3>
+
+                                    <div
+                                        id="durgaFaqFour"
+                                        className="accordion-collapse collapse"
+                                        data-bs-parent="#durgaFaqAccordion"
+                                    >
+                                        <div className="accordion-body">
+                                            You can submit an enquiry through our website
+                                            contact form or call us at +91 98100 32627.
+                                            Share your product requirements and quantity
+                                            so our team can respond to your enquiry.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* FAQ 5 */}
+                                <div className="accordion-item">
+                                    <h3 className="accordion-header">
+                                        <button
+                                            className="accordion-button collapsed"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#durgaFaqFive"
+                                            aria-expanded="false"
+                                            aria-controls="durgaFaqFive"
+                                        >
+                                            Where is Durga Enterprises located?
+                                        </button>
+                                    </h3>
+
+                                    <div
+                                        id="durgaFaqFive"
+                                        className="accordion-collapse collapse"
+                                        data-bs-parent="#durgaFaqAccordion"
+                                    >
+                                        <div className="accordion-body">
+                                            Durga Enterprises is located at 4882,
+                                            Shop No. 305–306, 3rd Floor, Laxmi Narayan
+                                            Market, Phatak Namak, Hauz Qazi,
+                                            Delhi – 110006, India.
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            {/* ================= FAQ SECTION end ================= */}
+
             {/* ================= TESTIMONIAL SECTION ================= */}
-<section className="home-testimonial-section py-lg-5 py-4">
-  <div className="container py-lg-4">
+            <section className="home-testimonial-section py-lg-5 py-4">
+                <div className="container py-lg-4">
 
-    {/* Global Heading */}
-    <div className="text-center mb-5">
-      <span className="section-subtitle">
-        Customer Feedback
-      </span>
+                    {/* Global Heading */}
+                    <div className="text-center mb-5">
+                        <span className="section-subtitle">
+                            Customer Feedback
+                        </span>
 
-      <h2 className="section-title">
-        What Our Customers Say
-      </h2>
+                        <h2 className="section-title">
+                            What Our Customers Say
+                        </h2>
 
-      <p className="home-testimonial-intro mx-auto mt-3 mb-0">
-        We value the trust of our customers and focus on
-        understanding their welding and industrial
-        safety product requirements.
-      </p>
-    </div>
+                        <p className="home-testimonial-intro mx-auto mt-3 mb-0">
+                            We value the trust of our customers and focus on
+                            understanding their welding and industrial
+                            safety product requirements.
+                        </p>
+                    </div>
 
-    {/* Testimonial Swiper */}
-    <Swiper
-      modules={[Pagination, Autoplay]}
-      slidesPerView={1}
-      spaceBetween={24}
-      speed={700}
-      grabCursor={true}
-      autoplay={{
-        delay: 4500,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      }}
-      pagination={{
-        clickable: true,
-        el: ".home-testimonial-pagination",
-      }}
-      breakpoints={{
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1200: {
-          slidesPerView: 3,
-          spaceBetween: 24,
-        },
-      }}
-      className="home-testimonial-slider"
-    >
+                    {/* Testimonial Swiper */}
+                    <Swiper
+                        modules={[Pagination, Autoplay]}
+                        slidesPerView={1}
+                        spaceBetween={24}
+                        speed={700}
+                        grabCursor={true}
+                        autoplay={{
+                            delay: 4500,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                        }}
+                        pagination={{
+                            clickable: true,
+                            el: ".home-testimonial-pagination",
+                        }}
+                        breakpoints={{
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                            1200: {
+                                slidesPerView: 3,
+                                spaceBetween: 24,
+                            },
+                        }}
+                        className="home-testimonial-slider"
+                    >
 
-      {testimonials.map((item) => (
-        <SwiperSlide key={item.id}>
+                        {testimonials.map((item) => (
+                            <SwiperSlide key={item.id}>
 
-          <div className="home-testimonial-card h-100">
+                                <div className="home-testimonial-card h-100">
 
-            {/* Rating */}
-            <div className="home-testimonial-rating mb-3">
-              {Array.from({ length: item.rating }).map((_, index) => (
-                <i
-                  key={index}
-                  className="fa-solid fa-star"
-                ></i>
-              ))}
-            </div>
+                                    {/* Rating */}
+                                    <div className="home-testimonial-rating mb-3">
+                                        {Array.from({ length: item.rating }).map((_, index) => (
+                                            <i
+                                                key={index}
+                                                className="fa-solid fa-star"
+                                            ></i>
+                                        ))}
+                                    </div>
 
-            {/* Review */}
-            <p className="home-testimonial-review">
-              "{item.review}"
-            </p>
+                                    {/* Review */}
+                                    <p className="home-testimonial-review">
+                                        "{item.review}"
+                                    </p>
 
-            {/* Customer Information */}
-            <div className="home-testimonial-user d-flex align-items-center gap-3 mt-auto">
+                                    {/* Customer Information */}
+                                    <div className="home-testimonial-user d-flex align-items-center gap-3 mt-auto">
 
-              <div className="home-testimonial-avatar">
-                <i className="fa-regular fa-user"></i>
-              </div>
+                                        <div className="home-testimonial-avatar">
+                                            <i className="fa-regular fa-user"></i>
+                                        </div>
 
-              <div>
-                <h5 className="mb-1">
-                  {item.name}
-                </h5>
+                                        <div>
+                                            <h5 className="mb-1">
+                                                {item.name}
+                                            </h5>
 
-                <span>
-                  {item.designation}
-                </span>
-              </div>
+                                            <span>
+                                                {item.designation}
+                                            </span>
+                                        </div>
 
-            </div>
+                                    </div>
 
-          </div>
+                                </div>
 
-        </SwiperSlide>
-      ))}
+                            </SwiperSlide>
+                        ))}
 
-    </Swiper>
+                    </Swiper>
 
-    {/* Pagination */}
-    <div className="home-testimonial-pagination"></div>
+                    {/* Pagination */}
+                    <div className="home-testimonial-pagination"></div>
 
-  </div>
-</section>
-{/* ================= TESTIMONIAL SECTION END ================= */}
+                </div>
+            </section>
+            {/* ================= TESTIMONIAL SECTION END ================= */}
 
 
 

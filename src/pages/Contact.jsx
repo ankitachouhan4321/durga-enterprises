@@ -110,6 +110,7 @@ const Contact = () => {
       {/* Contact Section */}
       <section className="durga-contact-section py-5">
         <div className="container py-lg-4">
+       
           <div className="row g-4">
 
             {/* LEFT SIDE - CONTACT DETAILS */}
@@ -119,7 +120,7 @@ const Contact = () => {
                 <div className="section-heading">
                 
                   <h2 className="section-title">
-                    Contact Us for Industrial Needs
+                    Contact Us 
                   </h2>
                 </div>
 
