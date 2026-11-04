@@ -564,7 +564,6 @@ a.top-header-item:hover {
   display: inline-flex;
   flex-direction: column;
   text-decoration: none;
-  margin-bottom: 25px;
 }
 
 .footer-brand-name {

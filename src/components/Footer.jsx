@@ -65,7 +65,7 @@ const Footer = () => {
             <div className="col-lg-4 col-md-6">
               <div className="footer-widget">
 
-                <Link to="/" className="footer-logo">
+                <Link to="/" className="footer-logo w-75">
                   <img src="/img/white-logo.png" alt="Durga Enterprises Logo" className="img-fluid" />
                 </Link>
 
