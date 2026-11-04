@@ -17,8 +17,6 @@ const App = () => {
     <>
 
 
-
-
         <Navbar />
 
         <Routes>
@@ -39,3 +37,6 @@ const App = () => {
 }
 
 export default App
+
+
+// https://preview.themeforest.net/item/dustrial-factory-industrial-html-template/full_screen_preview/22953802

@@ -146,17 +146,17 @@ const Home = () => {
                 >
                     {bannerSlides.map((slide, index) => (
                         <SwiperSlide key={slide.id}>
-                            <div
-                                className="home-banner-item d-flex align-items-center"
-                                style={{
-                                    backgroundImage: `linear-gradient(
+                           <div
+  className="home-banner-item d-flex align-items-center"
+  style={{
+    backgroundImage: `linear-gradient(
       90deg,
-      rgba(7, 31, 73, 0.90) 0%,
-      rgba(7, 31, 73, 0.75) 50%,
-      rgba(7, 31, 73, 0.55) 100%
+      rgba(24, 22, 20, 0.92) 0%,
+      rgba(24, 22, 20, 0.68) 48%,
+      rgba(24, 22, 20, 0.20) 100%
     ), url("${slide.image}")`,
-                                }}
-                            >
+  }}
+>
                                 <div className="container">
                                     <div className="row">
                                         <div className="col-lg-9 col-xl-8">
