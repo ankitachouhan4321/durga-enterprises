@@ -182,26 +182,32 @@ const Contact = () => {
             <div className="col-lg-8">
               <div className="durga-contact-form-wrapper">
 
-                <form onSubmit={handleSubmit}>
+                {/* DURGA ENTERPRISES - WORKING CONTACT FORM */}
+                <form
+                  action="https://formsubmit.co/info.viraladsmedia@gmail.com"
+                  method="POST"
+                >
+                  {/* FormSubmit Settings */}
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Enquiry - Durga Enterprises Website"
+                  />
 
-                  {/* Honeypot */}
-                  <div
-                    className="visually-hidden"
-                    aria-hidden="true"
-                  >
-                    <label htmlFor="contact-website">
-                      Leave this field blank
-                    </label>
-                    <input
-                      id="contact-website"
-                      type="text"
-                      name="website"
-                      value={formData.website}
-                      onChange={handleChange}
-                      tabIndex={-1}
-                      autoComplete="off"
-                    />
-                  </div>
+                  <input
+                    type="hidden"
+                    name="_template"
+                    value="table"
+                  />
+
+                  {/* Spam Protection */}
+                  <input
+                    type="text"
+                    name="_honey"
+                    style={{ display: "none" }}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
 
                   <div className="row g-4">
 
@@ -209,14 +215,11 @@ const Contact = () => {
                     <div className="col-md-6">
                       <input
                         type="text"
-                        name="name"
+                        name="Name"
                         className="durga-contact-input"
                         placeholder="Name *"
-                        aria-label="Your name"
-                        autoComplete="name"
-                        value={formData.name}
-                        onChange={handleChange}
                         maxLength={100}
+                        autoComplete="name"
                         required
                       />
                     </div>
@@ -225,14 +228,11 @@ const Contact = () => {
                     <div className="col-md-6">
                       <input
                         type="text"
-                        name="company"
+                        name="Company"
                         className="durga-contact-input"
                         placeholder="Company"
-                        aria-label="Company name"
-                        autoComplete="organization"
-                        value={formData.company}
-                        onChange={handleChange}
                         maxLength={120}
+                        autoComplete="organization"
                       />
                     </div>
 
@@ -243,11 +243,7 @@ const Contact = () => {
                         name="email"
                         className="durga-contact-input"
                         placeholder="Email Address *"
-                        aria-label="Email address"
                         autoComplete="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        maxLength={150}
                         required
                       />
                     </div>
@@ -256,15 +252,12 @@ const Contact = () => {
                     <div className="col-md-6">
                       <input
                         type="tel"
-                        name="phone"
+                        name="Phone"
                         className="durga-contact-input"
-                        placeholder="Phone *"
-                        aria-label="Phone number"
+                        placeholder="Phone Number *"
                         autoComplete="tel"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        pattern="[0-9+()\s-]{7,20}"
-                        title="Enter a valid phone number"
+                        minLength={7}
+                        maxLength={20}
                         required
                       />
                     </div>
@@ -272,45 +265,23 @@ const Contact = () => {
                     {/* Message */}
                     <div className="col-12">
                       <textarea
-                        name="message"
+                        name="Message"
                         className="durga-contact-textarea"
                         placeholder="How can we help? *"
-                        aria-label="Your message"
-                        value={formData.message}
-                        onChange={handleChange}
                         rows={9}
                         maxLength={3000}
                         required
-                      />
+                      ></textarea>
                     </div>
-
-                    {/* Form Status */}
-                    {status.message && (
-                      <div className="col-12">
-                        <div
-                          className={`alert alert-${status.type} mb-0`}
-                          role="status"
-                          aria-live="polite"
-                        >
-                          {status.message}
-                        </div>
-                      </div>
-                    )}
 
                     {/* Submit Button */}
                     <div className="col-12">
                       <button
                         type="submit"
                         className="durga-contact-submit"
-                        disabled={isSubmitting}
                       >
-                        {isSubmitting
-                          ? "SENDING..."
-                          : "SEND A MESSAGE"}
-
-                        {!isSubmitting && (
-                          <i className="fa-solid fa-arrow-right ms-2"></i>
-                        )}
+                        SEND A MESSAGE
+                        <i className="fa-solid fa-arrow-right ms-2"></i>
                       </button>
                     </div>
 
