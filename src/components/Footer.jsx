@@ -6,18 +6,18 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/about-us" },
-    { name: "Our Products", path: "/products" },
-    { name: "Industries We Serve", path: "/industries" },
-    { name: "Contact Us", path: "/contact-us" },
+    { name: "About Us", path: "/" },
+    { name: "Our Products", path: "/" },
+    { name: "Industries We Serve", path: "/" },
+    { name: "Contact Us", path: "/" },
   ];
 
   const productLinks = [
-    { name: "Welding Equipment", path: "/products/welding-equipment" },
-    { name: "Welding Accessories", path: "/products/welding-accessories" },
-    { name: "Industrial Safety Products", path: "/products/safety-products" },
-    { name: "Safety Gloves", path: "/products/safety-gloves" },
-    { name: "Safety Helmets", path: "/products/safety-helmets" },
+    { name: "Welding Equipment", path: "/" },
+    { name: "Welding Accessories", path: "/" },
+    { name: "Industrial Safety Products", path: "/" },
+    { name: "Safety Gloves", path: "/" },
+    { name: "Safety Helmets", path: "/" },
   ];
 
   return (
@@ -46,7 +46,7 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-4 text-lg-end">
-              <Link to="/contact-us" className="btn btn-theme">
+              <Link to="/contact-us" className=" btn-theme">
                 Get a Quote
                 <i className="fa-solid fa-arrow-right"></i>
               </Link>
@@ -66,12 +66,7 @@ const Footer = () => {
               <div className="footer-widget">
 
                 <Link to="/" className="footer-logo">
-                  <span className="footer-brand-name">
-                    DURGA
-                  </span>
-                  <span className="footer-brand-subtitle">
-                    ENTERPRISES
-                  </span>
+                  <img src="/img/white-logo.png" alt="Durga Enterprises Logo" className="img-fluid" />
                 </Link>
 
                 <p className="footer-about-text">
@@ -83,9 +78,9 @@ const Footer = () => {
                 </p>
 
                 <div className="footer-business-info">
-                  <p className="mb-2">
+                  {/* <p className="mb-2">
                     <strong>Business:</strong> Welding & Safety Products
-                  </p>
+                  </p> */}
 
                   <p className="mb-0">
                     <strong>GSTIN:</strong> 07AOZPA9607C1ZS
@@ -93,29 +88,47 @@ const Footer = () => {
                 </div>
 
                 {/* Contact Icons */}
-                <div className="footer-social d-flex gap-2 mt-4">
+                {/* Social Media Icons */}
+                <div className="footer-social d-flex align-items-center gap-2 mt-4">
+
                   <a
-                    href="https://wa.me/919810032627"
+                    href="https://www.facebook.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="WhatsApp Durga Enterprises"
+                    aria-label="Facebook"
                   >
-                    <i className="fa-brands fa-whatsapp"></i>
+                    <i className="fa-brands fa-facebook-f"></i>
                   </a>
 
                   <a
-                    href="tel:+919810032627"
-                    aria-label="Call Durga Enterprises"
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
                   >
-                    <i className="fa-solid fa-phone"></i>
+                    <i className="fa-brands fa-instagram"></i>
                   </a>
 
                   <a
-                    href="mailto:Durgaenterprises918@yahoo.com"
-                    aria-label="Email Durga Enterprises"
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
                   >
-                    <i className="fa-solid fa-envelope"></i>
+                    <i className="fa-brands fa-linkedin-in"></i>
                   </a>
+
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                  >
+                    <i className="fa-brands fa-youtube"></i>
+                  </a>
+
+                
+
                 </div>
 
               </div>
@@ -162,13 +175,7 @@ const Footer = () => {
                   ))}
                 </ul>
 
-                <Link
-                  to="/products"
-                  className="footer-view-all d-inline-flex align-items-center gap-2 mt-3"
-                >
-                  View All Products
-                  <i className="fa-solid fa-arrow-right"></i>
-                </Link>
+            
 
               </div>
             </div>
@@ -249,7 +256,8 @@ const Footer = () => {
 
             <div className="col-md-6 text-center text-md-end">
               <p className="mb-0">
-                Welding & Industrial Safety Products
+                Designed  by <a href="http://viraladsmedia.com/" target="_blank" rel="noopener noreferrer">Viral Ads Media </a>
+                All Rights Reserved.
               </p>
             </div>
 

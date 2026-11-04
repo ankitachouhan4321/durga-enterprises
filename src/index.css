@@ -3,15 +3,14 @@
   --color-primary: #c00000;
   --color-primary-hover: #980000;
   --color-secondary: #071f49;
-  --color-dark: #0b0b0b;
+  --color-dark: #041631;
   --color-white: #ffffff;
   --color-text: #252525;
   --color-border: #e6e6e6;
 
   /* Bootstrap Theme Overrides */
   --bs-primary: #c00000;
-  --bs-dark: #0b0b0b;
-
+  --bs-dark: #041631 !important;
 }
 /* Global Section Heading */
 .section-heading {
@@ -68,7 +67,7 @@
 
 /* heading end */
 
-a{
+a {
   text-decoration: none !important;
   outline: none !important;
 }
@@ -137,8 +136,6 @@ a{
 a.top-header-item:hover {
   color: var(--color-white);
 }
-
-
 
 .site-logo {
   width: 215px;
@@ -213,9 +210,7 @@ a.top-header-item:hover {
 /* ===================================
    DURGA ENTERPRISES - HOME BANNER
 =================================== */
-/* =====================================
-   DURGA ENTERPRISES - HOME BANNER
-===================================== */
+
 
 .home-banner {
   width: 100%;
@@ -263,7 +258,7 @@ a.top-header-item:hover {
 /* First Heading Highlight */
 .home-banner-title span {
   color: var(--color-primary);
-  font-weight: 400;
+  /* font-weight: 400; */
 }
 
 /* Banner Description */
@@ -414,12 +409,7 @@ a.top-header-item:hover {
   background-repeat: no-repeat;
 
   /* Diagonal Slash Shape */
-  clip-path: polygon(
-    38% 0,
-    100% 0,
-    100% 100%,
-    0 100%
-  );
+  clip-path: polygon(38% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Content Above Background */
@@ -430,7 +420,7 @@ a.top-header-item:hover {
 /* Left Content */
 .home-manufacturing-content {
   padding: 95px 0;
-  max-width: 560px;
+  max-width: 700px;
 }
 
 /* Paragraph */
@@ -507,14 +497,13 @@ a.top-header-item:hover {
   }
 }
 
-
 /* about-sec start */
 
-#about-sec p{
-      color: #444;
-    font-size: 15px;
-    line-height: 1.9;
-    margin-bottom: 18px;
+#about-sec p {
+  color: #444;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 18px;
 }
 
 /* about-sec end */
@@ -743,6 +732,10 @@ a.top-header-item:hover {
   color: var(--color-white);
 }
 
+.footer-bottom a{
+  color:white;
+}
+
 /* ======================================
    RESPONSIVE
 ====================================== */
@@ -817,7 +810,9 @@ a.top-header-item:hover {
 .home-industry-card {
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   box-shadow: 0 8px 25px rgba(7, 31, 73, 0.08);
 }
 
@@ -911,3 +906,884 @@ a.top-header-item:hover {
 }
 
 /* industries end */
+
+/* ==========================================
+   DURGA ENTERPRISES - FEATURED PRODUCTS
+========================================== */
+
+.home-products-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+/* Section Description */
+.home-products-intro {
+  max-width: 700px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666666;
+}
+
+/* ==========================================
+   SWIPER NAVIGATION
+========================================== */
+
+.home-products-prev,
+.home-products-next {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-secondary);
+  color: var(--color-white);
+  border: 1px solid var(--color-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home-products-prev:hover,
+.home-products-next:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.home-products-prev.swiper-button-disabled,
+.home-products-next.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   SWIPER SLIDER
+========================================== */
+
+.home-products-slider {
+  padding: 12px 2px 25px;
+}
+
+.home-products-slider .swiper-slide {
+  height: auto;
+}
+
+/* ==========================================
+   PRODUCT CARD
+========================================== */
+
+.home-product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid #e8ebf0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.home-product-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-primary);
+  box-shadow: 0 15px 35px rgba(7, 31, 73, 0.12);
+}
+
+/* ==========================================
+   PRODUCT IMAGE
+========================================== */
+
+.home-product-image {
+  position: relative;
+  width: 100%;
+  /* background: #f8f9fb; */
+  overflow: hidden;
+}
+
+.home-product-image a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.home-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  /* padding: 20px; */
+  transition: transform 0.5s ease;
+}
+
+.home-product-card:hover .home-product-image img {
+  transform: scale(1.08);
+}
+
+/* ==========================================
+   PRODUCT CONTENT
+========================================== */
+
+.home-product-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 22px 10px 18px;
+}
+
+/* Category */
+.home-product-category {
+  display: block;
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  margin-bottom: 10px;
+}
+
+/* Product Name */
+.home-product-name {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.4;
+  /* margin-bottom: 10px; */
+}
+
+.home-product-name a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.home-product-name a:hover {
+  color: var(--color-primary);
+}
+
+/* Product Description */
+.home-product-description {
+  color: #666666;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* ==========================================
+   PRODUCT BUTTONS
+========================================== */
+
+.home-product-actions {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 8px;
+  margin-top: auto;
+}
+
+/* Only adjust global button size inside cards */
+.home-product-actions .btn {
+  padding: 11px 8px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* ==========================================
+   SWIPER PAGINATION
+========================================== */
+
+.home-products-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 14px;
+}
+
+.home-products-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: var(--color-secondary);
+  opacity: 0.35;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home-products-pagination .swiper-pagination-bullet-active {
+  width: 28px;
+  background: var(--color-primary);
+  opacity: 1;
+}
+
+/* ==========================================
+   RESPONSIVE CSS
+========================================== */
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .home-products-intro {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .home-product-content {
+    padding: 18px 15px;
+  }
+
+  .home-product-name {
+    font-size: 17px;
+  }
+
+  .home-products-prev,
+  .home-products-next {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 575.98px) {
+  .home-product-actions .btn {
+    font-size: 12px;
+  }
+}
+
+/* product-section end */
+
+/* ==========================================
+   DURGA ENTERPRISES - WHY CHOOSE US
+========================================== */
+
+.home-why-choose-section {
+  position: relative;
+  background: var(--color-secondary);
+  color: var(--color-white);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Subtle Industrial Background Pattern */
+.home-why-choose-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.06;
+  background: repeating-linear-gradient(
+    135deg,
+    transparent 0,
+    transparent 55px,
+    #ffffff57 56px,
+    #ffffff4f 57px
+  );
+}
+
+/* Section Heading */
+.home-why-choose-head {
+  max-width: 800px;
+}
+
+.home-why-choose-subtitle {
+  display: block;
+  color: #ff6666;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.home-why-choose-title {
+  color: var(--color-white);
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.home-why-choose-intro {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   WHY CHOOSE CARDS
+========================================== */
+
+.home-choose-item {
+  position: relative;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.035);
+  border-radius: 8px;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Card Hover */
+.home-choose-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.14);
+}
+
+/* ==========================================
+   ICONS
+========================================== */
+
+.home-choose-icon {
+  flex: 0 0 62px;
+  width: 62px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ff6868;
+  background: rgba(192, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 50%;
+
+  font-size: 25px;
+  transition: all 0.3s ease;
+}
+
+.home-choose-item:hover .home-choose-icon {
+  color: var(--color-white);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: rotate(5deg);
+}
+
+/* ==========================================
+   CARD CONTENT
+========================================== */
+
+.home-choose-item h5 {
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.home-choose-item p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 991.98px) {
+  .home-why-choose-head {
+    max-width: 680px;
+  }
+
+  .home-choose-item {
+    padding: 20px 16px;
+  }
+
+  .home-choose-icon {
+    flex-basis: 56px;
+    width: 56px;
+    height: 56px;
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .home-why-choose-title {
+    font-size: 30px;
+  }
+
+  .home-why-choose-intro {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .home-choose-item h5 {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .home-choose-item {
+    padding: 18px 15px;
+    gap: 15px;
+  }
+
+  .home-choose-icon {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+  }
+
+  .home-choose-item p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .home-why-choose-subtitle {
+    font-size: 12px;
+  }
+
+  .home-why-choose-title {
+    font-size: 27px;
+  }
+}
+
+/* ==========================================
+   WHY CHOOSE US END
+========================================== */
+
+/* ==========================================
+   DURGA ENTERPRISES - STATS SECTION
+========================================== */
+
+#durga-stats-sec {
+  position: relative;
+  overflow: hidden;
+  /* background-color: #ffffff; */
+  isolation: isolate;
+ background-image:
+  linear-gradient(
+    rgba(255, 255, 255, 0.65),
+    rgba(255, 255, 255, 0.65)
+  ),
+  url("../img/map.png");
+  background-size: contain;
+
+}
+
+/* Subtle Industrial Background */
+#durga-stats-sec::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle at 15% 50%, rgba(192, 0, 0, 0.035), transparent 35%),
+    radial-gradient(circle at 85% 50%, rgba(7, 31, 73, 0.045), transparent 35%);
+}
+
+#durga-stats-sec .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================
+   MAIN COUNTER
+========================================== */
+
+.durga-stats-content {
+  max-width: 850px;
+}
+
+.durga-main-counter {
+  position: relative;
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: clamp(50px, 5vw, 76px);
+  font-weight: 800;
+  line-height: 1.1;
+  padding-bottom: 10px;
+}
+
+/* Curved Underline */
+.durga-counter-underline {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 105%;
+  height: 18px;
+  transform: translateX(-50%);
+  border-top: 5px solid var(--color-secondary);
+  border-radius: 50% 50% 0 0;
+}
+
+.durga-counter-underline::after {
+  content: "";
+  position: absolute;
+  left: 7%;
+  top: -1px;
+  width: 86%;
+  height: 8px;
+  border-top: 2px solid var(--color-primary);
+  border-radius: 50%;
+}
+
+/* ==========================================
+   HEADING AND DESCRIPTION
+========================================== */
+
+.durga-stats-heading {
+  color: var(--color-secondary);
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.durga-stats-desc {
+  max-width: 760px;
+  color: #606875;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* ==========================================
+   BOTTOM COUNTERS
+========================================== */
+
+.durga-stat-item {
+  position: relative;
+  padding: 22px 10px;
+  transition: transform 0.3s ease;
+}
+
+.durga-stat-item:hover {
+  transform: translateY(-6px);
+}
+
+.durga-stat-number {
+  color: var(--color-primary);
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.durga-stat-item h6 {
+  color: var(--color-secondary);
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+/* Small Decorative Divider */
+.durga-stat-item::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 3px;
+  background: var(--color-primary);
+  margin: 15px auto 0;
+  transition: width 0.3s ease;
+}
+
+.durga-stat-item:hover::after {
+  width: 60px;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 991.98px) {
+  .durga-stats-desc {
+    font-size: 15px;
+  }
+
+  .durga-stat-item {
+    padding: 18px 8px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .durga-main-counter {
+    font-size: 52px;
+  }
+
+  .durga-stats-heading {
+    font-size: 30px;
+  }
+
+  .durga-stats-desc {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .durga-stat-number {
+    font-size: 38px;
+  }
+
+  .durga-stat-item h6 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .durga-main-counter {
+    font-size: 44px;
+  }
+
+  .durga-stat-number {
+    font-size: 34px;
+  }
+
+  .durga-stat-item h6 {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   STATS SECTION END
+========================================== */
+/* ==========================================
+   DURGA ENTERPRISES - USP SECTION
+========================================== */
+
+#durga-usp-sec {
+  position: relative;
+  width: 100%;
+}
+
+/* USP Card */
+.durga-usp-card {
+  background: #ffffff;
+  padding: 25px 12px;
+  border: 1px solid #e8ebf0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Card Hover */
+.durga-usp-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 28px rgba(7, 31, 73, 0.1);
+}
+
+/* USP Icon */
+.durga-usp-icon {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(192, 0, 0, 0.08);
+  color: var(--color-primary);
+  font-size: 26px;
+  transition: all 0.3s ease;
+}
+
+/* Icon Hover */
+.durga-usp-card:hover .durga-usp-icon {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* USP Heading */
+.durga-usp-card h6 {
+  margin: 0;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .durga-usp-card {
+    padding: 22px 10px;
+  }
+
+  .durga-usp-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .durga-usp-card {
+    padding: 20px 8px;
+  }
+
+  .durga-usp-icon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 14px;
+    font-size: 23px;
+  }
+
+  .durga-usp-card h6 {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   USP SECTION END
+========================================== */
+
+/* ==========================================
+   DURGA ENTERPRISES - TESTIMONIAL SECTION
+========================================== */
+
+.home-testimonial-section {
+  position: relative;
+  width: 100%;
+  background: #f8f8f8;
+}
+
+/* Heading Description */
+.home-testimonial-intro {
+  max-width: 650px;
+  color: #666;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Swiper */
+.home-testimonial-slider {
+  padding: 10px 2px 25px;
+}
+
+.home-testimonial-slider .swiper-slide {
+  height: auto;
+}
+
+/* Testimonial Card */
+.home-testimonial-card {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 25px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.home-testimonial-card:hover {
+  border-color: #d5d5d5;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Star Rating */
+.home-testimonial-rating {
+  display: flex;
+  gap: 4px;
+  color: #f4b400;
+  font-size: 13px;
+}
+
+/* Review Text */
+.home-testimonial-review {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+/* Customer Information */
+.home-testimonial-user {
+  padding-top: 18px;
+  border-top: 1px solid #eeeeee;
+}
+
+/* Simple Avatar */
+.home-testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f3f5;
+  color: var(--color-secondary);
+  font-size: 20px;
+  border-radius: 50%;
+}
+
+.home-testimonial-user h5 {
+  color: var(--color-secondary);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.home-testimonial-user span {
+  color: #777;
+  font-size: 13px;
+}
+
+/* Swiper Pagination */
+.home-testimonial-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.home-testimonial-pagination .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  background: var(--color-secondary);
+  opacity: 0.3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home-testimonial-pagination .swiper-pagination-bullet-active {
+  width: 25px;
+  border-radius: 20px;
+  background: var(--color-primary);
+  opacity: 1;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 991.98px) {
+  .home-testimonial-card {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .home-testimonial-intro {
+    font-size: 14px;
+  }
+
+  .home-testimonial-review {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .home-testimonial-card {
+    padding: 25px 18px;
+  }
+
+  .home-testimonial-avatar {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+    font-size: 18px;
+  }
+}

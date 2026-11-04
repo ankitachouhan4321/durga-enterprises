@@ -23,7 +23,7 @@ const Navbar = () => {
 
                 <div className="top-header-item">
                   <i className="fa-regular fa-clock"></i>
-                  <span>Mon - Sat: Contact for Timings</span>
+                  <span>Mon - Sat: 10:00 AM - 6:00 PM</span>
                 </div>
 
                 <a
@@ -182,10 +182,11 @@ const Navbar = () => {
               {/* Global Button */}
               <li className="nav-item ms-lg-2 mt-3 mt-lg-0">
                 <Link
-                  to="/contact-us"
+                  to="tel:+919810032627"
                   className="btn-theme"
                 >
-                  Get a Quote
+                  <i className="fa-solid fa-phone fa-beat pe-4"></i>
+                  Call Now 
                 </Link>
               </li>
 

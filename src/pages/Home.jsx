@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, EffectFade } from "swiper/modules";
+import { Navigation, Autoplay, Pagination, EffectFade } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
+import Counter from "../components/Counter";
 
 
 const bannerSlides = [
@@ -18,26 +19,108 @@ const bannerSlides = [
             "Explore welding equipment, accessories and industrial safety products for workshops, fabrication units and businesses.",
         image: "https://simbott.com/wp-content/uploads/2024/05/Essential-Safety-Equipment-for-Welding-1024x576.jpg",
     },
+
+    // {
+    //     id: 2,
+    //     highlight: "Industrial Safety",
+    //     firstLine: "Protection Products",
+    //     secondLine: "For Your Workplace",
+    //     description:
+    //         "Discover industrial safety products for daily workplace requirements, protection and practical industrial applications.",
+    //     image: "https://simbott.com/wp-content/uploads/2024/05/Essential-Safety-Equipment-for-Welding-1024x576.jpg",
+    // },
+
+    // {
+    //     id: 3,
+    //     highlight: "Welding Solutions",
+    //     firstLine: "Equipment & Accessories",
+    //     secondLine: "For Professionals",
+    //     description:
+    //         "Find welding equipment and accessories for metal fabrication, maintenance and industrial operations.",
+    //     image: "https://simbott.com/wp-content/uploads/2024/05/Essential-Safety-Equipment-for-Welding-1024x576.jpg",
+    // },
+];
+
+const featuredProducts = [
+    {
+        id: 1,
+        name: "Reflective Safety Jackets",
+        image: "/img/prod/1.jpg",
+        slug: "reflective-safety-jackets",
+        description: "High-visibility reflective safety jackets for construction, road work, and industrial workplace safety.",
+    },
     {
         id: 2,
-        highlight: "Industrial Safety",
-        firstLine: "Protection Products",
-        secondLine: "For Your Workplace",
-        description:
-            "Discover industrial safety products for daily workplace requirements, protection and practical industrial applications.",
-        image: "https://simbott.com/wp-content/uploads/2024/05/Essential-Safety-Equipment-for-Welding-1024x576.jpg",
+        name: "Nilkamal Hexagonal Traffic Cone",
+        image: "/img/prod/2.jpg",
+        slug: "nilkamal-hexagonal-traffic-cone",
+        description: "750mm hexagonal traffic cone with reflective bands and 4kg weight for road safety and traffic management.",
     },
     {
         id: 3,
-        highlight: "Welding Solutions",
-        firstLine: "Equipment & Accessories",
-        secondLine: "For Professionals",
-        description:
-            "Find welding equipment and accessories for metal fabrication, maintenance and industrial operations.",
-        image: "https://simbott.com/wp-content/uploads/2024/05/Essential-Safety-Equipment-for-Welding-1024x576.jpg",
+        name: "Caution Warning Tape",
+        image: "/img/prod/3.jpg",
+        slug: "caution-warning-tape",
+        description: "Red and white caution tape with English and Hindi warning text for marking restricted and hazardous areas.",
     },
+    {
+        id: 4,
+        name: "Full Body Protective Safety Gear",
+        image: "/img/prod/4.jpg",
+        slug: "full-body-protective-safety-gear",
+        description: "Black body protection set with chest, shoulder, arm, thigh, and leg guards for impact protection.",
+    },
+    {
+        id: 5,
+        name: "Black Industrial Safety Glasses",
+        image: "/img/prod/5.jpg",
+        slug: "black-industrial-safety-glasses",
+        description: "Black protective eyewear with dark lenses for suitable industrial and workplace applications.",
+    },
+    {
+        id: 6,
+        name: "Volman Fall Arrester FF-800",
+        image: "/img/prod/6.jpg",
+        slug: "volman-fall-arrester-ff-800",
+        description: "Industrial rope grab fall arrester with metal locking mechanism for compatible fall protection systems.",
+    }
 ];
 
+// SAMPLE DATA - Replace with verified customer reviews
+const testimonials = [
+  {
+    id: 1,
+    name: "Customer Name",
+    designation: "Fabrication Workshop",
+    rating: 5,
+    review:
+      "We found the welding and safety product range useful for our workshop requirements. The enquiry process was straightforward.",
+  },
+  {
+    id: 2,
+    name: "Customer Name",
+    designation: "Industrial Buyer",
+    rating: 5,
+    review:
+      "The team helped us understand the available industrial safety products and suitable options for our requirements.",
+  },
+  {
+    id: 3,
+    name: "Customer Name",
+    designation: "Construction Contractor",
+    rating: 5,
+    review:
+      "We enquired about safety equipment for our project. The product information helped us compare the available options.",
+  },
+  {
+    id: 4,
+    name: "Customer Name",
+    designation: "Workshop Owner",
+    rating: 5,
+    review:
+      "A practical range of welding accessories and protective products for everyday workshop requirements.",
+  },
+];
 
 const Home = () => {
     return (
@@ -103,12 +186,12 @@ const Home = () => {
                                                 </p>
 
                                                 <div className="d-flex flex-wrap gap-4 mt-5">
-                                                    <Link
-                                                        to="/products"
+                                                    <a
+                                                        href="#product-sec"
                                                         className=" btn-theme"
                                                     >
                                                         Our Products
-                                                    </Link>
+                                                    </a>
 
                                                     <Link
                                                         to="/contact-us"
@@ -138,7 +221,7 @@ const Home = () => {
                         <div className="col-lg-6">
                             <div class="img-deg"></div>
                             <div className="img-box">
-                                <img src="/img/logo.png" alt="About Us" className="img-fluid" />
+                                <img src="/img/about.png" alt="About Us" className="img-fluid" />
                             </div>
 
                         </div>
@@ -174,7 +257,6 @@ const Home = () => {
 
                 </div>
             </section>
-
             {/* about-sec end */}
 
 
@@ -185,7 +267,7 @@ const Home = () => {
                 <div
                     className="home-manufacturing-image"
                     style={{
-                        backgroundImage: 'url("https://ifingerstudio.com/templates/dustrial-html/img/video-bg2.png")',
+                        backgroundImage: 'url("/img/man.png")',
                     }}
                     role="img"
                     aria-label="Welding and industrial manufacturing"
@@ -194,7 +276,7 @@ const Home = () => {
                 <div className="container position-relative">
                     <div className="row align-items-center">
 
-                        <div className="col-lg-6">
+                        <div className="col-lg-7">
                             <div className="home-manufacturing-content">
 
                                 {/* Global Heading */}
@@ -204,27 +286,34 @@ const Home = () => {
                                     </span>
 
                                     <h2 className="section-title">
-                                        Welding & Safety Products for Industrial Needs
+                                        Quality Welding & Safety Products
+                                        for Industrial Applications
                                     </h2>
                                 </div>
 
                                 {/* Manufacturing Content */}
                                 <p className="home-manufacturing-desc">
                                     At Durga Enterprises, we are engaged in the
-                                    manufacturing and importing of welding and
-                                    industrial safety products. Our product range
-                                    supports the requirements of fabrication
-                                    workshops, manufacturing units, contractors,
-                                    and industrial businesses.
+                                    manufacturing, importing, and supply of welding
+                                    and industrial safety products. We focus on
+                                    meeting the requirements of fabrication workshops,
+                                    construction companies, engineering units,
+                                    factories, contractors, and industrial businesses.
                                 </p>
 
                                 <p className="home-manufacturing-desc">
-                                    We focus on providing practical welding
-                                    accessories and workplace safety products
-                                    for different industrial applications.
-                                    Our range helps businesses find suitable
-                                    products for their everyday operations
-                                    and bulk purchasing requirements.
+                                    Our product range includes welding accessories,
+                                    safety gloves, helmets, protective eyewear,
+                                    safety shoes, ear protection equipment, and
+                                    other industrial safety essentials.
+                                </p>
+
+                                <p className="home-manufacturing-desc">
+                                    We understand the importance of consistent product
+                                    quality, suitable specifications, and dependable
+                                    supply. Our approach focuses on understanding
+                                    customer requirements and supporting both
+                                    regular and bulk purchasing needs.
                                 </p>
 
                                 {/* Company Information */}
@@ -234,17 +323,12 @@ const Home = () => {
                                     </h5>
 
                                     <span>
-                                        Manufacturing & Importing Welding and Safety Products
+                                        Manufacturing, Importing & Supplying
+                                        Welding and Industrial Safety Products
                                     </span>
                                 </div>
 
-                                {/* Global Button */}
-                                <div className="mt-4">
-                                    <Link to="/products" className=" btn-theme">
-                                        Explore Our Products
-                                        <i className="fa-solid fa-arrow-right"></i>
-                                    </Link>
-                                </div>
+                              
 
                             </div>
                         </div>
@@ -253,6 +337,8 @@ const Home = () => {
                 </div>
 
             </section>
+            {/* ================= MANUFACTURING SECTION end ================= */}
+
 
             {/* ================= INDUSTRIES WE SERVE ================= */}
             <section className="home-industries-section py-5">
@@ -260,7 +346,7 @@ const Home = () => {
                 <div className="container">
 
                     {/* Global Heading */}
-                    <div className="section-heading text-center mb-5">
+                    <div className=" text-center mb-5">
                       
 
                         <h2 className="section-title">
@@ -280,31 +366,31 @@ const Home = () => {
                         {[
                             {
                                 title: "Metal Fabrication",
-                                image: "/img/ind-1.webp",
+                                image: "/img/ind-1.jpg",
                             },
                             {
                                 title: "Manufacturing Units",
-                                image: "/img/ind-1.webp",
+                                image: "/img/ind-2.jpg",
                             },
                             {
                                 title: "Construction Industry",
-                                image: "/img/ind-1.webp",
+                                image: "/img/ind-3.jpg",
                             },
                             {
                                 title: "Automotive Workshops",
-                                image: "/img/ind-1.webp",
+                                image: "/img/ind-4.jpg",
                             },
                             {
                                 title: "Engineering Workshops",
-                                image: "/img/ind-1.webp",
+                                image: "/img/ind-5.jpg",
                             },
                             {
                                 title: "Industrial Maintenance",
-                                image: "/img/ind-1.webp",
+                                image: "/img/ind-6.jpg",
                             },
                             {
                                 title: "Steel & Metal Processing",
-                                image: "/img/ind-1.webp",
+                                image: "/img/ind-7.jpg",
                             },
                         ].map((industry, index) => (
 
@@ -340,12 +426,594 @@ const Home = () => {
                 </div>
 
             </section>
-
             {/* industries end */}
+            {/* ================= WHY CHOOSE US START ================= */}
+            <section
+                id="why-choose-us"
+                className="home-why-choose-section py-lg-5 py-4"
+            >
+                <div className="container py-lg-5">
 
-       
+                    {/* Global Section Heading */}
+                    <div className="home-why-choose-head text-center mx-auto mb-5">
 
+
+                        <h2 className="home-why-choose-title">
+                            Your Partner for Welding & Industrial Safety Products
+                        </h2>
+
+                        <p className="home-why-choose-intro">
+                            Durga Enterprises offers a wide range of welding accessories
+                            and industrial safety products for workshops, fabrication
+                            units, contractors, and industrial businesses. We focus on
+                            understanding customer requirements and providing suitable
+                            products for different applications.
+                        </p>
+                    </div>
+
+                    <div className="row g-4">
+
+                        {/* 01 */}
+                        <div className="col-lg-4 col-md-6">
+                            <div className="home-choose-item d-flex gap-3 h-100">
+                                <div className="home-choose-icon">
+                                    <i className="fa-solid fa-industry"></i>
+                                </div>
+
+                                <div>
+                                    <h5>Manufacturing & Importing</h5>
+                                    <p>
+                                        Engaged in manufacturing and importing welding
+                                        and industrial safety products to serve different
+                                        business requirements.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 02 */}
+                        <div className="col-lg-4 col-md-6">
+                            <div className="home-choose-item d-flex gap-3 h-100">
+                                <div className="home-choose-icon">
+                                    <i className="fa-solid fa-boxes-stacked"></i>
+                                </div>
+
+                                <div>
+                                    <h5>Wide Product Range</h5>
+                                    <p>
+                                        Explore welding accessories, protective equipment,
+                                        traffic safety products, and other industrial
+                                        safety essentials in one place.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 03 */}
+                        <div className="col-lg-4 col-md-6">
+                            <div className="home-choose-item d-flex gap-3 h-100">
+                                <div className="home-choose-icon">
+                                    <i className="fa-solid fa-shield-halved"></i>
+                                </div>
+
+                                <div>
+                                    <h5>Safety-Focused Products</h5>
+                                    <p>
+                                        Products for workplace protection, road safety,
+                                        welding operations, and other applications
+                                        where appropriate safety equipment is essential.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 04 */}
+                        <div className="col-lg-4 col-md-6">
+                            <div className="home-choose-item d-flex gap-3 h-100">
+                                <div className="home-choose-icon">
+                                    <i className="fa-solid fa-clipboard-check"></i>
+                                </div>
+
+                                <div>
+                                    <h5>Product Selection Support</h5>
+                                    <p>
+                                        We help customers explore suitable product
+                                        options based on their application, required
+                                        specifications, and purchasing needs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 05 */}
+                        <div className="col-lg-4 col-md-6">
+                            <div className="home-choose-item d-flex gap-3 h-100">
+                                <div className="home-choose-icon">
+                                    <i className="fa-solid fa-helmet-safety"></i>
+                                </div>
+
+                                <div>
+                                    <h5>Industrial Applications</h5>
+                                    <p>
+                                        Our product range supports fabrication,
+                                        construction, maintenance, engineering,
+                                        manufacturing, and industrial workplace needs.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 06 */}
+                        <div className="col-lg-4 col-md-6">
+                            <div className="home-choose-item d-flex gap-3 h-100">
+                                <div className="home-choose-icon">
+                                    <i className="fa-solid fa-truck-fast"></i>
+                                </div>
+
+                                <div>
+                                    <h5>Bulk Order Enquiries</h5>
+                                    <p>
+                                        We welcome enquiries from industrial buyers,
+                                        contractors, traders, and businesses looking
+                                        for products in larger quantities.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 07 */}
+                        <div className="col-lg-4 col-md-6">
+                            <div className="home-choose-item d-flex gap-3 h-100">
+                                <div className="home-choose-icon">
+                                    <i className="fa-solid fa-screwdriver-wrench"></i>
+                                </div>
+
+                                <div>
+                                    <h5>Practical Product Solutions</h5>
+                                    <p>
+                                        From welding accessories to protective gear,
+                                        our range is intended to address everyday
+                                        industrial and workplace requirements.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 08 */}
+                        <div className="col-lg-4 col-md-6">
+                            <div className="home-choose-item d-flex gap-3 h-100">
+                                <div className="home-choose-icon">
+                                    <i className="fa-solid fa-handshake"></i>
+                                </div>
+
+                                <div>
+                                    <h5>Customer-Focused Approach</h5>
+                                    <p>
+                                        We focus on understanding customer needs,
+                                        communicating product information clearly,
+                                        and building lasting business relationships.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* 09 */}
+                        <div className="col-lg-4 col-md-6">
+                            <div className="home-choose-item d-flex gap-3 h-100">
+                                <div className="home-choose-icon">
+                                    <i className="fa-solid fa-headset"></i>
+                                </div>
+
+                                <div>
+                                    <h5>Responsive Enquiry Support</h5>
+                                    <p>
+                                        Connect with our team for product information,
+                                        availability enquiries, specifications,
+                                        and assistance with your requirements.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            {/* ================= WHY CHOOSE US END ================= */}
+
+            {/* ================= FEATURED PRODUCTS ================= */}
+            <section className="home-products-section py-5" id="product-sec">
+
+                <div className="container">
+
+                    {/* Section Heading */}
+                    <div className="row align-items-end g-3 mb-4">
+
+                        <div className="col-lg-8">
+                            <div className="section-heading mb-0">
+                                <span className="section-subtitle">
+                                    Our Product Collection
+                                </span>
+
+                                <h2 className="section-title">
+                                    Explore Our Featured Products
+                                </h2>
+                            </div>
+
+                            <p className="home-products-intro mt-3 mb-0">
+                                Discover welding equipment, accessories and industrial
+                                safety products for workshops, fabrication units
+                                and various industrial applications.
+                            </p>
+                        </div>
+
+                        {/* Slider Navigation */}
+                        <div className="col-lg-4">
+                            <div className="d-flex gap-2 justify-content-lg-end">
+
+                                <button
+                                    type="button"
+                                    className="home-products-prev"
+                                    aria-label="Previous products"
+                                >
+                                    <i className="fa-solid fa-arrow-left"></i>
+                                </button>
+
+                                <button
+                                    type="button"
+                                    className="home-products-next"
+                                    aria-label="Next products"
+                                >
+                                    <i className="fa-solid fa-arrow-right"></i>
+                                </button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    {/* Products Slider */}
+                    <Swiper
+                        modules={[Navigation, Pagination, Autoplay]}
+                        spaceBetween={24}
+                        slidesPerView={1}
+                        speed={700}
+                        grabCursor={true}
+                        autoplay={{
+                            delay: 3500,
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                        }}
+                        navigation={{
+                            prevEl: ".home-products-prev",
+                            nextEl: ".home-products-next",
+                        }}
+                        pagination={{
+                            clickable: true,
+                            el: ".home-products-pagination",
+                        }}
+                        breakpoints={{
+                            576: {
+                                slidesPerView: 2,
+                                spaceBetween: 16,
+                            },
+                            992: {
+                                slidesPerView: 3,
+                                spaceBetween: 20,
+                            },
+                            1200: {
+                                slidesPerView: 4,
+                                spaceBetween: 24,
+                            },
+                        }}
+                        className="home-products-slider"
+                    >
+
+                        {featuredProducts.map((product) => (
+                            <SwiperSlide key={product.id}>
+
+                                <article className="home-product-card h-100">
+
+                                    {/* Product Image */}
+                                    <div className="home-product-image">
+
+                                        <Link to={`/products/${product.slug}`}>
+                                            <img
+                                                src={product.image}
+                                                alt={product.name}
+                                                loading="lazy"
+                                            />
+                                        </Link>
+
+                                
+
+                                    </div>
+
+                                    {/* Product Information */}
+                                    <div className="home-product-content">
+
+                                        <span className="home-product-category">
+                                            {product.category}
+                                        </span>
+
+                                        <h3 className="home-product-name">
+                                            <Link to={`/products/${product.slug}`}>
+                                                {product.name}
+                                            </Link>
+                                        </h3>
+
+                                        <p className="home-product-description">
+                                            {product.description}
+                                        </p>
+
+                                        {/* Card Buttons */}
+                                        <div className="home-product-actions">
+
+                                            {/* <Link
+                                                to={`/products/${product.slug}`}
+                                                className=" btn-theme-outline home-product-view"
+                                            >
+                                                View More
+                                            </Link> */}
+
+                                            <a
+                                                href={`https://wa.me/919810032627?text=${encodeURIComponent(
+                                                    `Hello Durga Enterprises, I would like to enquire about ${product.name}.`
+                                                )}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className=" btn-theme home-product-enquiry"
+                                            >
+                                                Enquire Now <i className="fa-solid fa-arrow-right"></i>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                </article>
+
+                            </SwiperSlide>
+                        ))}
+
+                    </Swiper>
+
+
+                    {/* View All Products */}
+                    <div className="text-center mt-4">
+                        <Link to="/products" className=" btn-theme">
+                            View All Products
+                            <i className="fa-solid fa-arrow-right"></i>
+                        </Link>
+                    </div>
+
+                </div>
+
+            </section>
             {/* product-sec end */}
+
+            {/* ================= DURGA STATS SECTION ================= */}
+            <section id="durga-stats-sec">
+                <div className="container py-lg-5 py-3">
+
+                    {/* Main Counter */}
+                    <div className="text-center durga-stats-content mx-auto">
+
+                        <div className="durga-main-counter">
+                            <Counter end={500} suffix="+" />
+                            <span className="durga-counter-underline"></span>
+                        </div>
+
+                        <h2 className="durga-stats-heading mt-4">
+                            Customers Served
+                        </h2>
+
+                        <p className="durga-stats-desc mx-auto mt-3">
+                            Durga Enterprises focuses on serving industrial buyers,
+                            fabrication workshops, contractors, and businesses
+                            with welding accessories and industrial safety products.
+                            We aim to support customers with suitable product
+                            options and responsive enquiry assistance.
+                        </p>
+
+                    </div>
+
+                    {/* Bottom Counters */}
+                    <div className="row justify-content-center text-center g-4 mt-lg-4 mt-3">
+
+                        {/* Counter 1 */}
+                        <div className="col-lg-3 col-sm-4 col-6">
+                            <div className="durga-stat-item">
+                                <div className="durga-stat-number">
+                                    <Counter end={10} suffix="+" />
+                                </div>
+                                <h6>Years of Experience</h6>
+                            </div>
+                        </div>
+
+                        {/* Counter 2 */}
+                        <div className="col-lg-3 col-sm-4 col-6">
+                            <div className="durga-stat-item">
+                                <div className="durga-stat-number">
+                                    <Counter end={100} suffix="+" />
+                                </div>
+                                <h6>Products Available</h6>
+                            </div>
+                        </div>
+
+                        {/* Counter 3 */}
+                        <div className="col-lg-3 col-sm-4 col-6">
+                            <div className="durga-stat-item">
+                                <div className="durga-stat-number">
+                                    <Counter end={15} suffix="+" />
+                                </div>
+                                <h6>Product Categories</h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            {/* ================= DURGA STATS SECTION END ================= */}
+
+            {/* ================= USP SECTION START ================= */}
+            <section id="durga-usp-sec" className="pb-5">
+                <div className="container">
+                    <div className="row g-3 justify-content-center">
+
+                        {[
+                            {
+                                icon: "fa-tags",
+                                title: "Competitive Wholesale Pricing",
+                            },
+                            {
+                                icon: "fa-shield-halved",
+                                title: "Safety-Focused Product Range",
+                            },
+                            {
+                                icon: "fa-boxes-stacked",
+                                title: "Wide Range of Products",
+                            },
+                            {
+                                icon: "fa-industry",
+                                title: "Manufacturing & Importing",
+                            },
+                            {
+                                icon: "fa-headset",
+                                title: "Customer Enquiry Support",
+                            },
+                            {
+                                icon: "fa-truck",
+                                title: "Bulk Order Assistance",
+                            },
+                        ].map((item, index) => (
+                            <div
+                                className="col-xl-2 col-lg-3 col-md-4 col-6"
+                                key={index}
+                                data-aos="fade-up"
+                                data-aos-delay={index * 100}
+                            >
+                                <div className="durga-usp-card text-center h-100">
+
+                                    <div className="durga-usp-icon">
+                                        <i className={`fa-solid ${item.icon}`}></i>
+                                    </div>
+
+                                    <h6>{item.title}</h6>
+
+                                </div>
+                            </div>
+                        ))}
+
+                    </div>
+                </div>
+            </section>
+            {/* ================= USP SECTION END ================= */}
+
+            {/* ================= TESTIMONIAL SECTION ================= */}
+<section className="home-testimonial-section py-lg-5 py-4">
+  <div className="container py-lg-4">
+
+    {/* Global Heading */}
+    <div className="text-center mb-5">
+      <span className="section-subtitle">
+        Customer Feedback
+      </span>
+
+      <h2 className="section-title">
+        What Our Customers Say
+      </h2>
+
+      <p className="home-testimonial-intro mx-auto mt-3 mb-0">
+        We value the trust of our customers and focus on
+        understanding their welding and industrial
+        safety product requirements.
+      </p>
+    </div>
+
+    {/* Testimonial Swiper */}
+    <Swiper
+      modules={[Pagination, Autoplay]}
+      slidesPerView={1}
+      spaceBetween={24}
+      speed={700}
+      grabCursor={true}
+      autoplay={{
+        delay: 4500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      }}
+      pagination={{
+        clickable: true,
+        el: ".home-testimonial-pagination",
+      }}
+      breakpoints={{
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+      }}
+      className="home-testimonial-slider"
+    >
+
+      {testimonials.map((item) => (
+        <SwiperSlide key={item.id}>
+
+          <div className="home-testimonial-card h-100">
+
+            {/* Rating */}
+            <div className="home-testimonial-rating mb-3">
+              {Array.from({ length: item.rating }).map((_, index) => (
+                <i
+                  key={index}
+                  className="fa-solid fa-star"
+                ></i>
+              ))}
+            </div>
+
+            {/* Review */}
+            <p className="home-testimonial-review">
+              "{item.review}"
+            </p>
+
+            {/* Customer Information */}
+            <div className="home-testimonial-user d-flex align-items-center gap-3 mt-auto">
+
+              <div className="home-testimonial-avatar">
+                <i className="fa-regular fa-user"></i>
+              </div>
+
+              <div>
+                <h5 className="mb-1">
+                  {item.name}
+                </h5>
+
+                <span>
+                  {item.designation}
+                </span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </SwiperSlide>
+      ))}
+
+    </Swiper>
+
+    {/* Pagination */}
+    <div className="home-testimonial-pagination"></div>
+
+  </div>
+</section>
+{/* ================= TESTIMONIAL SECTION END ================= */}
+
+
 
         </>
     )
