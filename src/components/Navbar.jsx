@@ -38,23 +38,62 @@ const Navbar = () => {
             </div>
 
             <div className="col-lg-2 d-none d-lg-block">
-              <div className="d-flex justify-content-end gap-3">
+
+              {/* Social Media Links */}
+              <div className="d-flex justify-content-end align-items-center gap-3">
+
                 <a
-                  href="tel:+919810032627"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white"
-                  aria-label="Call Durga Enterprises"
+                  aria-label="Facebook"
                 >
-                  <i className="fa-solid fa-phone"></i>
+                  <i className="fa-brands fa-facebook-f"></i>
                 </a>
 
                 <a
-                  href="mailto:Durgaenterprises918@yahoo.com"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white"
-                  aria-label="Email Durga Enterprises"
+                  aria-label="Instagram"
                 >
-                  <i className="fa-solid fa-envelope"></i>
+                  <i className="fa-brands fa-instagram"></i>
                 </a>
+
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white"
+                  aria-label="LinkedIn"
+                >
+                  <i className="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a
+                  href="https://www.youtube.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white"
+                  aria-label="YouTube"
+                >
+                  <i className="fa-brands fa-youtube"></i>
+                </a>
+
+                <a
+                  href="https://x.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white"
+                  aria-label="X (Twitter)"
+                >
+                  <i className="fa-brands fa-x-twitter"></i>
+                </a>
+
               </div>
+
             </div>
 
           </div>
@@ -101,7 +140,7 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/about-us">
+                <NavLink className="nav-link" to="/about">
                   About Us
                 </NavLink>
               </li>
@@ -161,7 +200,7 @@ const Navbar = () => {
               </li>
 
               <li className="nav-item">
-                <NavLink className="nav-link" to="/contact-us">
+                <NavLink className="nav-link" to="/contact">
                   Contact Us
                 </NavLink>
               </li>

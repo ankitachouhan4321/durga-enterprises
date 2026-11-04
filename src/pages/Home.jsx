@@ -17,7 +17,7 @@ const bannerSlides = [
         secondLine: "For Every Industry",
         description:
             "Explore welding equipment, accessories and industrial safety products for workshops, fabrication units and businesses.",
-        image: "https://simbott.com/wp-content/uploads/2024/05/Essential-Safety-Equipment-for-Welding-1024x576.jpg",
+        image: "img/banner1.png",
     },
 
     {
@@ -27,7 +27,7 @@ const bannerSlides = [
         secondLine: "For Your Workplace",
         description:
             "Discover industrial safety products for daily workplace requirements, protection and practical industrial applications.",
-        image: "https://simbott.com/wp-content/uploads/2024/05/Essential-Safety-Equipment-for-Welding-1024x576.jpg",
+        image: "img/banner2.png",
     },
 
     {
@@ -37,7 +37,7 @@ const bannerSlides = [
         secondLine: "For Professionals",
         description:
             "Find welding equipment and accessories for metal fabrication, maintenance and industrial operations.",
-        image: "https://simbott.com/wp-content/uploads/2024/05/Essential-Safety-Equipment-for-Welding-1024x576.jpg",
+        image: "img/banner3.png",
     },
 ];
 
@@ -149,12 +149,7 @@ const Home = () => {
                            <div
   className="home-banner-item d-flex align-items-center"
   style={{
-    backgroundImage: `linear-gradient(
-      90deg,
-      rgba(24, 22, 20, 0.92) 0%,
-      rgba(24, 22, 20, 0.68) 48%,
-      rgba(24, 22, 20, 0.20) 100%
-    ), url("${slide.image}")`,
+    backgroundImage: `url("${slide.image}")`,
   }}
 >
                                 <div className="container">
