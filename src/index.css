@@ -43,7 +43,7 @@
 /* Main Heading */
 .section-title {
   color: var(--color-secondary);
-  font-size: clamp(28px, 2.5vw, 38px);
+  font-size: clamp(22px, 2.5vw, 38px);
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
@@ -1538,7 +1538,7 @@ a.top-header-item:hover {
   }
 
   .durga-stat-number {
-    font-size: 34px;
+    font-size: 24px;
   }
 
   .durga-stat-item h6 {
@@ -2480,4 +2480,321 @@ a.top-header-item:hover {
 
 /* ==========================================
    PRODUCT CAPABILITIES END
+========================================== */
+
+/* ==========================================
+   DURGA ENTERPRISES - CORE VALUES
+========================================== */
+
+.durga-vmv-values-section {
+  width: 100%;
+}
+
+/* Section Heading */
+.durga-vmv-values-heading {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.durga-vmv-values-subtitle {
+  display: block;
+  color: var(--color-primary, #c00000);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.durga-vmv-values-heading h3 {
+  color: #252525;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.durga-vmv-values-heading p {
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+/* ==========================================
+   DURGA ENTERPRISES - VISION MISSION VALUES
+========================================== */
+/* 
+.durga-vmv-section {
+  background: #f6f7f8;
+} */
+
+/* ==========================================
+   MAIN HEADING
+========================================== */
+
+.durga-vmv-heading,
+.durga-vmv-values-heading {
+  max-width: 760px;
+}
+
+
+.durga-vmv-heading p,
+.durga-vmv-values-heading p {
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   VISION & MISSION CARDS
+========================================== */
+
+.durga-vmv-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 2px;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+
+.durga-vmv-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+}
+
+/* Top Icon Row */
+.durga-vmv-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+/* Main Icons */
+.durga-vmv-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 27px;
+}
+
+/* Vision Icon - Muted Blue */
+.durga-vmv-icon.vision-icon {
+  background: #eaf1fa;
+  color: #346baf;
+}
+
+/* Mission Icon - Green */
+.durga-vmv-icon.mission-icon {
+  background: #e8f5ed;
+  color: #31845b;
+}
+
+/* Card Numbers */
+.durga-vmv-number {
+  color: #e7e7e7;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Vision / Mission Headings */
+.durga-vmv-card h3 {
+  color: #252525;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Vision / Mission Content */
+.durga-vmv-card p {
+  color: #626262;
+  font-size: 15px;
+  line-height: 1.85;
+  margin-bottom: 14px;
+}
+
+.durga-vmv-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   CORE VALUES HEADING
+========================================== */
+
+.durga-vmv-values-heading h3 {
+  color: #252525;
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* ==========================================
+   CORE VALUES - TWO SIMPLE CARDS
+========================================== */
+
+.durga-vmv-value-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+
+.durga-vmv-value-card:hover {
+  border-color: #d4d4d4;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.04);
+}
+
+/* Icon + Title */
+.durga-vmv-value-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+/* Value Icons */
+.durga-vmv-value-icon {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 23px;
+}
+
+/* Quality Icon - Amber */
+.durga-vmv-value-icon.value-quality {
+  background: #faf1df;
+  color: #a97823;
+}
+
+/* Customer Icon - Teal */
+.durga-vmv-value-icon.value-customer {
+  background: #e8f4f2;
+  color: #318577;
+}
+
+/* Value Heading */
+.durga-vmv-value-card h4 {
+  color: #252525;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Value Description */
+.durga-vmv-value-card > p {
+  color: #666666;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* ==========================================
+   CORE VALUES BULLET LIST
+========================================== */
+
+.durga-vmv-value-list {
+  margin: 0;
+  padding: 18px 0 0 20px;
+  border-top: 1px solid #eeeeee;
+  list-style: disc;
+}
+
+.durga-vmv-value-list li {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+
+.durga-vmv-value-list li:last-child {
+  margin-bottom: 0;
+}
+
+.durga-vmv-value-list li::marker {
+  color: #777777;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 991.98px) {
+  .durga-vmv-card {
+    padding: 30px;
+  }
+
+  .durga-vmv-value-card {
+    padding: 27px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .durga-vmv-heading h2 {
+    font-size: 28px;
+  }
+
+  .durga-vmv-heading p,
+  .durga-vmv-values-heading p {
+    font-size: 14px;
+  }
+
+  .durga-vmv-card {
+    padding: 25px 20px;
+  }
+
+  .durga-vmv-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 23px;
+  }
+
+  .durga-vmv-number {
+    font-size: 40px;
+  }
+
+  .durga-vmv-card h3 {
+    font-size: 22px;
+  }
+
+  .durga-vmv-card p {
+    font-size: 14px;
+  }
+
+  .durga-vmv-value-card {
+    padding: 24px 20px;
+  }
+
+  .durga-vmv-value-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 20px;
+  }
+
+  .durga-vmv-value-card h4 {
+    font-size: 17px;
+  }
+
+  .durga-vmv-value-card > p {
+    font-size: 14px;
+  }
+
+  .durga-vmv-value-list li {
+    font-size: 13px;
+  }
+}
+
+/* ==========================================
+   END VISION MISSION VALUES
 ========================================== */

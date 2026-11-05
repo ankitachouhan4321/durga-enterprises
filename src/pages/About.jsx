@@ -1,5 +1,6 @@
 import React from 'react'
 import Breadcrumb from '../components/Breadcrumb'
+import Counter from '../components/Counter'
 
 const About = () => {
   return (
@@ -61,6 +62,52 @@ const About = () => {
 
           </div>
 
+
+          {/* Bottom Counters */}
+          <div className="row justify-content-center text-center g-4 mt-lg-4 mt-3">
+
+            {/* Counter 1 */}
+            <div className="col-lg-3 col-sm-4 col-6">
+              <div className="durga-stat-item">
+                <div className="durga-stat-number">
+                  <Counter end={10} suffix="+" />
+                </div>
+                <h6>Years of Experience</h6>
+              </div>
+            </div>
+
+            {/* Counter 2 */}
+            <div className="col-lg-3 col-sm-4 col-6">
+              <div className="durga-stat-item">
+                <div className="durga-stat-number">
+                  <Counter end={100} suffix="+" />
+                </div>
+                <h6>Products Available</h6>
+              </div>
+            </div>
+
+            {/* Counter 3 */}
+            <div className="col-lg-3 col-sm-4 col-6">
+              <div className="durga-stat-item">
+                <div className="durga-stat-number">
+                  <Counter end={100} suffix="%" />
+                </div>
+                <h6>Customer Satisfaction</h6>
+              </div>
+            </div>
+
+            {/* Counter 3 */}
+            <div className="col-lg-3 col-sm-4 col-6">
+              <div className="durga-stat-item">
+                <div className="durga-stat-number">
+                  PAN India
+                </div>
+                <h6>Service Across India</h6>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </section>
       {/* about-sec end */}
@@ -80,6 +127,7 @@ const About = () => {
         ></div>
 
         <div className="container position-relative">
+
           <div className="row align-items-center">
 
             <div className="col-lg-7">
@@ -134,8 +182,6 @@ const About = () => {
                   </span>
                 </div>
 
-
-
               </div>
             </div>
 
@@ -145,7 +191,185 @@ const About = () => {
       </section>
       {/* ================= MANUFACTURING SECTION end ================= */}
 
+      {/* ================= VISION, MISSION & VALUES START ================= */}
+      <section className="durga-vmv-section py-5">
+        <div className="container py-lg-4">
 
+          {/* Main Heading */}
+          <div className="durga-vmv-heading text-center mx-auto mb-5">
+            <span className="section-subtitle">
+              WHAT DRIVES US
+            </span>
+
+            <h2 className='section-title'>Our Vision, Mission & Values</h2>
+
+            <p>
+              At Durga Enterprises, we focus on providing practical
+              welding accessories and industrial safety products
+              while understanding the changing requirements
+              of our customers.
+            </p>
+          </div>
+
+          {/* ================= VISION & MISSION ================= */}
+          <div className="row g-4 mb-5">
+
+            {/* Vision */}
+            <div className="col-lg-6">
+              <div className="durga-vmv-card h-100">
+
+                <div className="durga-vmv-top">
+                  <div className="durga-vmv-icon vision-icon">
+                    <i className="fa-solid fa-eye"></i>
+                  </div>
+
+                  <span className="durga-vmv-number">01</span>
+                </div>
+
+                <h3>Our Vision</h3>
+
+                <p>
+                  To become a dependable source for welding
+                  equipment, accessories, and industrial
+                  safety products by helping businesses
+                  find suitable products for their
+                  workplace requirements.
+                </p>
+
+                <p>
+                  We aim to support fabrication workshops,
+                  manufacturing units, contractors, and
+                  industrial businesses through practical
+                  product choices and customer-focused service.
+                </p>
+
+              </div>
+            </div>
+
+            {/* Mission */}
+            <div className="col-lg-6">
+              <div className="durga-vmv-card h-100">
+
+                <div className="durga-vmv-top">
+                  <div className="durga-vmv-icon mission-icon">
+                    <i className="fa-solid fa-bullseye"></i>
+                  </div>
+
+                  <span className="durga-vmv-number">02</span>
+                </div>
+
+                <h3>Our Mission</h3>
+
+                <p>
+                  To understand our customers' industrial
+                  requirements and provide suitable welding
+                  accessories, protective equipment, and
+                  workplace safety essentials.
+                </p>
+
+                <p>
+                  We focus on offering clear product
+                  information, responsive enquiry assistance,
+                  and support for individual and bulk
+                  purchasing requirements.
+                </p>
+
+              </div>
+            </div>
+
+          </div>
+
+          {/* ================= CORE VALUES ================= */}
+          <div className=" text-center mx-auto mb-4">
+
+
+            <h2 className="section-title">Our Core Values</h2>
+
+            <p>
+              The principles that guide our approach
+              to products, service, and customer relationships.
+            </p>
+          </div>
+
+          <div className="row g-4">
+
+            {/* Core Value 1 */}
+            <div className="col-lg-6">
+              <div className="durga-vmv-value-card h-100">
+
+                <div className="durga-vmv-value-top">
+                  <div className="durga-vmv-value-icon value-quality">
+                    <i className="fa-solid fa-shield-halved"></i>
+                  </div>
+
+                  <h4>Quality & Product Reliability</h4>
+                </div>
+
+                <p>
+                  We believe in providing practical product
+                  choices that suit industrial applications
+                  and workplace requirements.
+                </p>
+
+                <ul className="durga-vmv-value-list">
+                  <li>
+                    Product options for industrial applications
+                  </li>
+                  <li>
+                    Focus on welding and workplace safety needs
+                  </li>
+                  <li>
+                    Attention to customer product requirements
+                  </li>
+                  <li>
+                    Clear product information and assistance
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+
+            {/* Core Value 2 */}
+            <div className="col-lg-6">
+              <div className="durga-vmv-value-card h-100">
+
+                <div className="durga-vmv-value-top">
+                  <div className="durga-vmv-value-icon value-customer">
+                    <i className="fa-solid fa-handshake"></i>
+                  </div>
+
+                  <h4>Customer Commitment & Integrity</h4>
+                </div>
+
+                <p>
+                  We value customer relationships and focus
+                  on maintaining clear communication and
+                  helpful enquiry support.
+                </p>
+
+                <ul className="durga-vmv-value-list">
+                  <li>
+                    Customer-focused product assistance
+                  </li>
+                  <li>
+                    Transparent business communication
+                  </li>
+                  <li>
+                    Support for individual and bulk enquiries
+                  </li>
+                  <li>
+                    Focus on long-term business relationships
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+      {/* ================= VISION, MISSION & VALUES END =================  */}
 
 
       {/* ================= PRODUCT CAPABILITIES START ================= */}

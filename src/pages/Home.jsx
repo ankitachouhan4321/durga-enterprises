@@ -348,7 +348,7 @@ const Home = () => {
 
 
             {/* ================= INDUSTRIES WE SERVE ================= */}
-            <section className="home-industries-section py-5">
+            <section className="home-industries-section py-5" id="indus">
 
                 <div className="container">
 
@@ -852,9 +852,9 @@ const Home = () => {
                         <div className="col-lg-3 col-sm-4 col-6">
                             <div className="durga-stat-item">
                                 <div className="durga-stat-number">
-                                    <Counter end={15} suffix="+" />
+                                    <Counter end={100} suffix="%" />
                                 </div>
-                                <h6>Product Categories</h6>
+                                <h6>Customer Satisfaction</h6>
                             </div>
                         </div>
 

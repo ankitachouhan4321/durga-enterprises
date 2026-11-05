@@ -1,9 +1,12 @@
 import React from 'react'
+import Breadcrumb from '../components/Breadcrumb'
 
 const Product = () => {
   return (
     <>
-      product
+      <Breadcrumb title="Our Products" />
+
+
     </>
   )
 }
