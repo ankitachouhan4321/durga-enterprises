@@ -154,31 +154,13 @@ const Navbar = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Products
+                 Our Products
                 </Link>
 
                 <ul className="dropdown-menu">
                   <li>
-                    <Link className="dropdown-item" to="/products">
-                      All Products
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="dropdown-item"
-                      to="/products/welding-equipment"
-                    >
-                      Welding Equipment
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="dropdown-item"
-                      to="/products/welding-accessories"
-                    >
-                      Welding Accessories
+                    <Link className="dropdown-item" to="/products/safety-products">
+                      Safety Products
                     </Link>
                   </li>
 
@@ -187,9 +169,37 @@ const Navbar = () => {
                       className="dropdown-item"
                       to="/products/safety-products"
                     >
-                      Safety Products
+                      MIG & TIG Torches
                     </Link>
                   </li>
+
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/products/welding-accessories"
+                    >
+                      Gas Cutters & PUG Cutting Machines
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      className="dropdown-item"
+                      to="/products/safety-products"
+                    >
+                      Welding Accessories & Regulators
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link
+                      className="dropdown-item border-0"
+                      to="/products/safety-products"
+                    >
+                      Brass Parts
+                    </Link>
+                  </li>
+
                 </ul>
               </li>
 

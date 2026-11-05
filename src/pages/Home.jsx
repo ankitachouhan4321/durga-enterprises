@@ -732,8 +732,6 @@ const Home = () => {
                                             />
                                         </Link>
 
-
-
                                     </div>
 
                                     {/* Product Information */}
