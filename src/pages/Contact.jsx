@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Breadcrumb from "../components/Breadcrumb";
 
-const CONTACT_EMAIL = "info.viraladsmedia@gmail.com";
+const CONTACT_EMAIL = "durgaenterprises918@yahoo.com";
 
 const initialForm = {
   name: "",
@@ -185,7 +185,7 @@ const Contact = () => {
 
                 {/* DURGA ENTERPRISES - WORKING CONTACT FORM */}
                 <form
-                  action="https://formsubmit.co/info.viraladsmedia@gmail.com"
+                  action="https://formsubmit.co/durgaenterprises918@yahoo.com"
                   method="POST"
                 >
                   {/* FormSubmit Settings */}
