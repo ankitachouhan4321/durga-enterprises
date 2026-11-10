@@ -1,6 +1,7 @@
 import React from 'react'
 import Breadcrumb from '../components/Breadcrumb'
 import Counter from '../components/Counter'
+import {Link} from 'react-router-dom';
 
 const About = () => {
   return (
@@ -53,10 +54,10 @@ const About = () => {
 
               <br />
 
-              <a href="/about" className="btn-theme mt-4">
-                Read More
-                <i className="fa-solid fa-arrow-right"></i>
-              </a>
+              <Link to="/contact" className="btn-theme mt-4">
+                Contact Now
+                <i className="fa-solid fa-arrow-right ps-2"></i>
+              </Link>
 
             </div>
 

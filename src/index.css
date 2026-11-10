@@ -806,7 +806,9 @@ a.top-header-item:hover {
 /* ==========================================
    DURGA ENTERPRISES - INDUSTRIES WE SERVE
 ========================================== */
-
+#indus {
+  scroll-margin-top: 100px;
+}
 .home-industries-section {
   position: relative;
   width: 100%;

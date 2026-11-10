@@ -51,10 +51,11 @@ const featuredProducts = [
     },
     {
         id: 2,
-        name: "Nilkamal Hexagonal Traffic Cone",
+        name: "Barricade Cone",
         image: "/img/prod/2.jpg",
-        slug: "nilkamal-hexagonal-traffic-cone",
-        description: "750mm hexagonal traffic cone with reflective bands and 4kg weight for road safety and traffic management.",
+        slug: "barricade-cone",
+        description:
+            "Traffic barricade cone for marking construction sites, road work zones, restricted areas and temporary safety boundaries.",
     },
     {
         id: 3,
@@ -79,9 +80,9 @@ const featuredProducts = [
     },
     {
         id: 6,
-        name: "Volman Fall Arrester FF-800",
+        name: "Fall Arrester FF-800",
         image: "/img/prod/6.jpg",
-        slug: "volman-fall-arrester-ff-800",
+        slug: "fall-arrester-ff-800",
         description: "Industrial rope grab fall arrester with metal locking mechanism for compatible fall protection systems.",
     }
 ];
@@ -189,7 +190,7 @@ const Home = () => {
                                                     </a>
 
                                                     <Link
-                                                        to="/contact-us"
+                                                        to="/contact"
                                                         className=" btn-theme-outline home-banner-outline"
                                                     >
                                                         Contact Us
@@ -253,10 +254,10 @@ const Home = () => {
 
                             <br />
 
-                            <a href="/about" className="btn-theme mt-4">
+                            <Link to="/about" className="btn-theme mt-4">
                                 Read More
                                 <i className="fa-solid fa-arrow-right"></i>
-                            </a>
+                            </Link>
 
                         </div>
 
@@ -786,7 +787,7 @@ const Home = () => {
 
                     {/* View All Products */}
                     <div className="text-center mt-4">
-                        <Link to="/products" className=" btn-theme">
+                        <Link to="/products/safety-products" className=" btn-theme">
                             View All Products
                             <i className="fa-solid fa-arrow-right"></i>
                         </Link>

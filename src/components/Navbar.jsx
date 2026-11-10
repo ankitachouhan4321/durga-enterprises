@@ -43,7 +43,7 @@ const Navbar = () => {
               <div className="d-flex justify-content-end align-items-center gap-3">
 
                 <a
-                  href="https://www.facebook.com/"
+                  href="https://www.facebook.com/durgaenterprises.fb"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white"
@@ -53,7 +53,7 @@ const Navbar = () => {
                 </a>
 
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/durgaenterprises.ig/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white"
@@ -62,7 +62,7 @@ const Navbar = () => {
                   <i className="fa-brands fa-instagram"></i>
                 </a>
 
-                <a
+                {/* <a
                   href="https://www.linkedin.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -90,7 +90,7 @@ const Navbar = () => {
                   aria-label="X (Twitter)"
                 >
                   <i className="fa-brands fa-x-twitter"></i>
-                </a>
+                </a> */}
 
               </div>
 

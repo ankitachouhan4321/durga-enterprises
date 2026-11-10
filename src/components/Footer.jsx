@@ -6,18 +6,18 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "Home", path: "/" },
-    { name: "About Us", path: "/" },
-    { name: "Our Products", path: "/" },
-    { name: "Industries We Serve", path: "/" },
-    { name: "Contact Us", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Our Products", path: "/products/safety-products" },
+    { name: "Industries We Serve", path: "/#indus" },
+    { name: "Contact Us", path: "/contact" },
   ];
 
   const productLinks = [
-    { name: "Welding Equipment", path: "/" },
-    { name: "Welding Accessories", path: "/" },
-    { name: "Industrial Safety Products", path: "/" },
-    { name: "Safety Gloves", path: "/" },
-    { name: "Safety Helmets", path: "/" },
+    { name: "Safety Products", path: "/products/safety-products" },
+    { name: "MIG & TIG Torches", path: "/products/mig-tig-torches" },
+    { name: "Gas Cutters & PUG Cutting Machines", path: "/products/gas-cutters-pug-cutting-Mmchines" },
+    { name: "Welding Accessories & Regulators", path: "/products/welding-accessories-regulators" },
+    { name: "Brass Parts", path: "/products/brass-parts" },
   ];
 
   return (
@@ -46,9 +46,9 @@ const Footer = () => {
             </div>
 
             <div className="col-lg-4 text-lg-end">
-              <Link to="/contact-us" className=" btn-theme">
+              <Link to="/contact" className=" btn-theme">
                 Get a Quote
-                <i className="fa-solid fa-arrow-right"></i>
+                <i className="fa-solid fa-arrow-right ps-2"></i>
               </Link>
             </div>
 
@@ -92,7 +92,7 @@ const Footer = () => {
                 <div className="footer-social d-flex align-items-center gap-2 mt-4">
 
                   <a
-                    href="https://www.facebook.com/"
+                    href="https://www.facebook.com/durgaenterprises.fb"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
@@ -101,7 +101,7 @@ const Footer = () => {
                   </a>
 
                   <a
-                    href="https://www.instagram.com/"
+                    href="https://www.instagram.com/durgaenterprises.ig/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
@@ -109,7 +109,7 @@ const Footer = () => {
                     <i className="fa-brands fa-instagram"></i>
                   </a>
 
-                  <a
+                  {/* <a
                     href="https://www.linkedin.com/"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -125,7 +125,7 @@ const Footer = () => {
                     aria-label="YouTube"
                   >
                     <i className="fa-brands fa-youtube"></i>
-                  </a>
+                  </a> */}
 
 
 
@@ -256,7 +256,7 @@ const Footer = () => {
 
             <div className="col-md-6 text-center text-md-end">
               <p className="mb-0">
-                Designed  by <a href="http://viraladsmedia.com/" target="_blank" rel="noopener noreferrer">Viral Ads Media </a>
+                Designed  by <a href="http://viraladsmedia.com/" target="_blank" rel="noopener noreferrer"><strong>Viral Ads Media</strong>  </a>
                 All Rights Reserved.
               </p>
             </div>

@@ -13,13 +13,17 @@ import MIGTIGTorches from "./pages/categories/MIGTIGTorches";
 import GasCuttersPUGCuttingMachines from "./pages/categories/GasCuttersPUGCuttingMachines";
 import WeldingAccessoriesRegulators from "./pages/categories/WeldingAccessoriesRegulators";
 import BrassParts from "./pages/categories/BrassParts";
+import ScrollToTop from './components/ScrollToTop';
+import ScrollToHash from "./components/ScrollToHash";
+
 
 
 
 const App = () => {
   return (
     <>
-
+      <ScrollToTop />
+      <ScrollToHash/>
 
       <Navbar />
 
