@@ -7,7 +7,7 @@ const Navbar = () => {
 
       {/* Top Header */}
       <div className="top-header text-white">
-        <div className="container-lg">
+        <div className="container">
           <div className="row align-items-center">
 
             <div className="col-lg-10">
@@ -102,7 +102,7 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <nav className="navbar navbar-expand-lg bg-white shadow-sm">
-        <div className="container">
+        <div className="container-lg">
 
           {/* Logo */}
           <Link className="navbar-brand" to="/">
