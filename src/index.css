@@ -194,6 +194,30 @@ a.top-header-item:hover {
 /* Responsive */
 
 @media (max-width: 991.98px) {
+ .navbar-collapse {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background: #fff;
+    padding: 80px 20px 20px;
+    z-index: 1050;
+    transform: translateX(-100%);
+    transition: transform 0.35s ease;
+    overflow-y: auto;
+  }
+
+  .navbar-collapse.collapse.show,
+  .navbar-collapse.collapsing {
+    transform: translateX(0);
+  }
+
+  .navbar-collapse.collapsing {
+    height: 100vh !important;
+    transition: transform 0.35s ease;
+  }
+  
   .top-header {
     display: none;
   }
@@ -261,6 +285,21 @@ a.top-header-item:hover {
   border-top: none;
   padding: 0 20px 20px;
 }
+@media (max-width:575px) {
+  #productSearchModal .modal-body {
+  padding: 15px 10px;
+}
+#productSearchModal .modal-content{
+  padding: 0;
+}
+#productSearchModal .modal-footer {
+    padding: 0 20px 10px;
+}
+#productSearchModal .modal-header {
+    padding: 10px 10px;
+  
+}
+}
 /* header end */
 
 /* ===================================
@@ -288,6 +327,7 @@ a.top-header-item:hover {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+
 }
 
 /* Banner Container */

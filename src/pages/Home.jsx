@@ -150,7 +150,14 @@ const Home = () => {
                             <div
                                 className="home-banner-item d-flex align-items-center"
                                 style={{
-                                    backgroundImage: `url("${slide.image}")`,
+                                    backgroundImage: `linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.53) 0%,
+    rgba(0, 0, 0, 0.06) 50%,
+    rgba(0, 0, 0, 0) 100%
+  ), url("${slide.image}")`,
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
                                 }}
                             >
                                 <div className="container">

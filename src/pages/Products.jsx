@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import Breadcrumb from "../components/Breadcrumb";
+
 
 import {
     productCategories,
@@ -115,7 +115,8 @@ const Products = ({ categorySlug: fixedCategorySlug }) => {
     if (categoryNotFound) {
         return (
             <>
-                <Breadcrumb title="Category Not Found" />
+             
+             
 
                 <section className="py-5">
                     <div className="container text-center">
@@ -137,13 +138,8 @@ const Products = ({ categorySlug: fixedCategorySlug }) => {
 
     return (
         <>
-            <Breadcrumb
-                title={
-                    activeCategory
-                        ? activeCategory.name
-                        : "Our Products"
-                }
-            />
+           
+           
 
             <section className="durga-catalog-section py-5">
                 <div className="container py-lg-4">
