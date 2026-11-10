@@ -167,7 +167,7 @@ const Navbar = () => {
                   <li>
                     <Link
                       className="dropdown-item"
-                      to="/products/safety-products"
+                      to="/products/mig-tig-torches"
                     >
                       MIG & TIG Torches
                     </Link>
@@ -176,7 +176,7 @@ const Navbar = () => {
                   <li>
                     <Link
                       className="dropdown-item"
-                      to="/products/welding-accessories"
+                      to="/products/gas-cutters-pug-cutting-Mmchines"
                     >
                       Gas Cutters & PUG Cutting Machines
                     </Link>
@@ -185,7 +185,7 @@ const Navbar = () => {
                   <li>
                     <Link
                       className="dropdown-item"
-                      to="/products/safety-products"
+                      to="/products/welding-accessories-regulators"
                     >
                       Welding Accessories & Regulators
                     </Link>
@@ -194,7 +194,7 @@ const Navbar = () => {
                   <li>
                     <Link
                       className="dropdown-item border-0"
-                      to="/products/safety-products"
+                      to="/products/brass-parts"
                     >
                       Brass Parts
                     </Link>

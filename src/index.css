@@ -1831,7 +1831,7 @@ a.top-header-item:hover {
   color: #ffffff;
   font-size: clamp(28px, 3vw, 42px);
   font-weight: 600;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-align: center;
   line-height: 1.2;
   margin: 0;

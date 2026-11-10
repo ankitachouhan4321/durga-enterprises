@@ -10,7 +10,7 @@ import {
 } from "../data/products";
 
 
-const PRODUCTS_PER_PAGE = 12;
+const PRODUCTS_PER_PAGE = 20;
 const WHATSAPP_NUMBER = "919810032627";
 
 const Products = ({ categorySlug: fixedCategorySlug }) => {
@@ -154,7 +154,7 @@ const Products = ({ categorySlug: fixedCategorySlug }) => {
                         <div className="col-lg-8">
                             <div className="section-heading mb-0">
                                 <span className="section-subtitle">
-                                    DURGA ENTERPRISES
+                                    Our Products
                                 </span>
 
                                 <h2 className="section-title">
