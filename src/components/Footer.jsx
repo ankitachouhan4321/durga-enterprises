@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import FloatingContact from './FloatingContact';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,6 +22,8 @@ const Footer = () => {
   ];
 
   return (
+
+    <>
     <footer className="site-footer">
 
       {/* Top CTA Strip */}
@@ -266,6 +269,10 @@ const Footer = () => {
       </div>
 
     </footer>
+ 
+      <FloatingContact/>
+    
+        </>
   );
 };
 

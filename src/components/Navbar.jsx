@@ -281,7 +281,7 @@ const Navbar = () => {
               </div>
 
               <div className="modal-footer">
-                <button type="submit" className="btn btn-theme">
+                <button type="submit" className=" btn-theme">
                   Search
                 </button>
               </div>

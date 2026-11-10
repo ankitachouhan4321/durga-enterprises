@@ -220,6 +220,47 @@ a.top-header-item:hover {
   }
 }
 
+/* Product Search Modal */
+
+#productSearchModal .modal-content {
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+#productSearchModal .modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+#productSearchModal .modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+#productSearchModal .modal-body {
+  padding: 24px 20px;
+}
+
+#productSearchModal .form-control {
+  height: 50px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px 15px;
+  font-size: 14px;
+}
+
+#productSearchModal .form-control:focus {
+  border-color: #c00000;
+  box-shadow: 0 0 0 3px rgba(192, 0, 0, 0.08);
+}
+
+#productSearchModal .modal-footer {
+  border-top: none;
+  padding: 0 20px 20px;
+}
 /* header end */
 
 /* ===================================
@@ -3310,3 +3351,87 @@ a.top-header-item:hover {
 /* ==========================================
    PRODUCTS PAGE END
 ========================================== */
+
+/* Durga Enterprises - Floating Contact Buttons */
+
+.durga-floating-contact {
+  position: fixed;
+  right: 20px;
+  bottom: 25px;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.durga-float-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 18px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+  transition: all 0.3s ease;
+}
+
+.durga-float-btn i {
+  font-size: 20px;
+}
+
+.durga-float-btn:hover {
+  transform: translateY(-4px);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+}
+
+/* WhatsApp */
+.durga-float-btn.whatsapp-btn {
+  background: #25d366;
+}
+
+.durga-float-btn.whatsapp-btn:hover {
+  background: #1ebe5d;
+}
+
+/* Call - Durga Red Theme */
+.durga-float-btn.call-btn {
+  background: var(--color-primary, #c00000);
+}
+
+.durga-float-btn.call-btn:hover {
+  background: var(--color-primary-hover, #980000);
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+  .durga-floating-contact {
+    right: 15px;
+    bottom: 20px;
+    gap: 10px;
+  }
+
+  .durga-float-btn {
+    width: 50px;
+    height: 50px;
+    min-height: 50px;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  .durga-float-btn span {
+    display: none;
+  }
+
+  .durga-float-btn i {
+    font-size: 23px;
+  }
+}
+
+/* Durga Enterprises - Floating Contact Buttons end */
