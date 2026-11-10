@@ -102,7 +102,7 @@ const Navbar = () => {
 
       {/* Main Navbar */}
       <nav className="navbar navbar-expand-lg bg-white shadow-sm">
-        <div className="container-lg">
+        <div className="container-xl">
 
           {/* Logo */}
           <Link className="navbar-brand" to="/">
